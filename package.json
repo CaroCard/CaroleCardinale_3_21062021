@@ -1,0 +1,19 @@
+{
+  "name": "jason-is-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaroCard/CaroleCardinale_3_21062021.git"
+  },
+  "author": "Carole Cardinale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaroCard/CaroleCardinale_3_21062021/issues"
+  },
+  "homepage": "https://github.com/CaroCard/CaroleCardinale_3_21062021#readme"
+}
