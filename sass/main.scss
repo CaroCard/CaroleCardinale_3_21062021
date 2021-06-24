@@ -1,0 +1,91 @@
+@import "./Base/fonts";
+
+$colors: (primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+$font-size: (XL: 2em, L: 1.3em, M: 1em, S: 0.9em, XS: 0.8em);
+
+
+body{
+    margin: 20px;
+    font-family: 'robotoThin';
+}
+
+h1{
+    font-size: map-get($font-size, L);
+    font-family: 'robotoMedium';
+}
+
+h2, p, button, li{
+    font-size: map-get($font-size, M);
+}
+
+header{
+    text-align: center;
+    img{
+        height: 2em;
+    }
+}
+
+#mapExplore{
+    text-align: center;
+}
+
+button{
+    background-color: map-get($colors, secondary);
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    color: white;
+}
+
+#fonctionnement{
+    div{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+figure{
+    margin: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 2px 5px 5px grey;
+
+    i{
+        font-size: map-get($font-size, L);
+    }
+}
+
+
+
+
+ section img{
+    width: 335px;
+    height: 175px;
+    object-fit: cover;
+}
+
+//FOOTER//
+footer{
+    img{
+        height: 1em;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    i{
+        object-fit: contain;
+        margin-right: 0.5rem;
+        font-size: map-get($font-size, S);
+    }
+
+    .fa-hands-helping{
+        font-size: 0.6em;
+    }
+}

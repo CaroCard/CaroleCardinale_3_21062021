@@ -1,3 +1,89 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url(../fonts/shrikhand/Shrikhand-Regular.otf);
+}
+@font-face {
+  font-family: "robotoThin";
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: "robotoRegular";
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "robotoMedium";
+  src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+body {
+  margin: 20px;
+  font-family: "robotoThin";
+}
 
+h1 {
+  font-size: 1.3em;
+  font-family: "robotoMedium";
+}
+
+h2, p, button, li {
+  font-size: 1em;
+}
+
+header {
+  text-align: center;
+}
+header img {
+  height: 2em;
+}
+
+#mapExplore {
+  text-align: center;
+}
+
+button {
+  background-color: #FF79DA;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.7rem 1rem 0.7rem 1rem;
+  color: white;
+}
+
+#fonctionnement div {
+  display: flex;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 5px 5px grey;
+}
+figure i {
+  font-size: 1.3em;
+}
+
+section img {
+  width: 335px;
+  height: 175px;
+  object-fit: cover;
+}
+
+footer img {
+  height: 1em;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  list-style: none;
+}
+footer i {
+  object-fit: contain;
+  margin-right: 0.5rem;
+  font-size: 0.9em;
+}
+footer .fa-hands-helping {
+  font-size: 0.6em;
+}
 
 /*# sourceMappingURL=style.css.map */
