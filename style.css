@@ -15,8 +15,7 @@
   src: url(../fonts/roboto/Roboto-Medium.ttf);
 }
 body {
-  margin: 20px;
-  font-family: "robotoThin";
+  font-family: "robotoRegular";
 }
 
 h1 {
@@ -28,48 +27,34 @@ h2, p, button, li {
   font-size: 1em;
 }
 
-header {
-  text-align: center;
-}
-header img {
-  height: 2em;
+p {
+  font-family: "robotoThin";
 }
 
-#mapExplore {
-  text-align: center;
+figure i {
+  font-size: 1.3em;
 }
 
 button {
   background-color: #FF79DA;
   border: none;
-  border-radius: 1.2rem;
-  padding: 0.7rem 1rem 0.7rem 1rem;
+  border-radius: 2rem;
+  padding: 0.8rem 0.8rem;
   color: white;
 }
 
-#fonctionnement div {
-  display: flex;
-  align-items: center;
+footer {
+  background-color: #333333;
+  color: #fff;
 }
-
-figure {
-  margin: 0;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 2px 5px 5px grey;
+footer a {
+  color: #fff;
+  text-decoration: none;
 }
-figure i {
+footer h3 {
+  font-family: "shrikhand";
   font-size: 1.3em;
-}
-
-section img {
-  width: 335px;
-  height: 175px;
-  object-fit: cover;
-}
-
-footer img {
-  height: 1em;
+  font-weight: normal;
 }
 footer ul {
   padding: 0;
@@ -84,6 +69,74 @@ footer i {
 }
 footer .fa-hands-helping {
   font-size: 0.6em;
+}
+
+body {
+  margin: auto;
+}
+
+header, #explore, #fonctionnement, #restaurants, footer {
+  padding: 0 1.2rem;
+}
+
+#map, #explore, #fonctionnment div, #containerRestaurants {
+  display: flex;
+}
+
+#explore, #containerRestaurants {
+  flex-direction: column;
+  align-items: center;
+}
+
+#map, #fonctionnement div {
+  justify-content: center;
+}
+
+#explore, #fonctionnement div, #restaurants {
+  background-color: #f2f2f2;
+}
+
+header {
+  padding: 1rem 1.2rem 0.5rem 1.2rem;
+}
+header img {
+  height: 2em;
+}
+
+#map {
+  background-color: #e6e6e6;
+  color: #333333;
+  align-items: center;
+}
+
+header, #explore {
+  text-align: center;
+}
+
+#fonctionnement div {
+  display: flex;
+  align-items: center;
+}
+#fonctionnement #fonctionnementDegustez {
+  background-color: ligthen(#9356DC, 20);
+  color: #9356DC;
+}
+
+#restaurants a {
+  color: #000;
+  text-decoration: none;
+}
+#restaurants figure {
+  margin: 0 0 1.2rem 0;
+  width: 335px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 5px 5px grey;
+}
+#restaurants img {
+  width: 335px;
+  height: 175px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

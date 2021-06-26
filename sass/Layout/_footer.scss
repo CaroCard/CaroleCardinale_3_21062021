@@ -1,0 +1,32 @@
+//FOOTER//
+footer{
+    background-color: lighten(#000, 20);
+    color: #fff;
+    a{
+        @include links(#fff);
+    }
+
+    h3{
+        font-family: 'shrikhand';
+        font-size: map-get($font-size, L);
+        font-weight: normal;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    i{
+        object-fit: contain;
+        margin-right: 0.5rem;
+        font-size: map-get($font-size, S);
+    }
+
+    .fa-hands-helping{
+        font-size: 0.6em;
+    }
+}

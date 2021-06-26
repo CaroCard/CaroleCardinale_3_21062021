@@ -1,0 +1,7 @@
+button{
+    background-color: map-get($colors, secondary);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 0.8rem;
+    color: white;
+}

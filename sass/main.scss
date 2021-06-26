@@ -1,91 +1,92 @@
+@import "./Utils/variables";
+@import "./Utils/mixins";
 @import "./Base/fonts";
-
-$colors: (primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
-$font-size: (XL: 2em, L: 1.3em, M: 1em, S: 0.9em, XS: 0.8em);
+@import "./Composants/buttons";
+@import "./Layout/footer";
 
 
 body{
-    margin: 20px;
-    font-family: 'robotoThin';
+    margin: auto;
 }
 
-h1{
-    font-size: map-get($font-size, L);
-    font-family: 'robotoMedium';
+//MARGINS PADDINGS//
+header, #explore, #fonctionnement, #restaurants, footer{
+    padding: 0 1.2rem;
 }
 
-h2, p, button, li{
-    font-size: map-get($font-size, M);
+#map, #explore, #fonctionnment div, #containerRestaurants{
+    display: flex;
 }
 
+#explore, #containerRestaurants{
+    flex-direction: column;
+    align-items: center;
+}
+
+#map, #fonctionnement div{
+    justify-content: center;
+}
+
+//COLORS//
+#explore, #fonctionnement div, #restaurants{
+    background-color: darken(#fff, 5);
+}
+
+
+                        // ALL //
 header{
-    text-align: center;
+    padding: 1rem 1.2rem 0.5rem 1.2rem;
     img{
         height: 2em;
     }
 }
 
-#mapExplore{
+#map{
+    background-color: darken(#fff, 10);
+    color: lighten(#000, 20);
+    align-items: center;
+}
+
+header, #explore{
     text-align: center;
 }
 
-button{
-    background-color: map-get($colors, secondary);
-    border: none;
-    border-radius: 1.2rem;
-    padding: 0.7rem 1rem 0.7rem 1rem;
-    color: white;
-}
 
+                        //FONCTIONNEMENT//
 #fonctionnement{
     div{
         display: flex;
         align-items: center;
     }
-}
 
-
-figure{
-    margin: 0;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 2px 5px 5px grey;
-
-    i{
-        font-size: map-get($font-size, L);
+    #fonctionnementDegustez{
+        background-color: ligthen(map-get($colors, primary), 20);   //NON EFFECTIVE, TO CORRECT PLS//
+        color: map-get($colors, primary);
     }
 }
 
 
-
-
- section img{
-    width: 335px;
-    height: 175px;
-    object-fit: cover;
-}
-
-//FOOTER//
-footer{
+                        //RESTAURANTS//
+ 
+#restaurants{ 
+   a{
+       @include links;
+    }
+    figure{
+        margin: 0 0 1.2rem 0;
+        width: $img-width;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 2px 5px 5px grey;
+    }
     img{
-        height: 1em;
+        width: $img-width;
+        height: 175px;
+        object-fit: cover;
     }
+}                       
 
-    ul{
-        padding: 0;
-    }
 
-    li{
-        list-style: none;
-    }
 
-    i{
-        object-fit: contain;
-        margin-right: 0.5rem;
-        font-size: map-get($font-size, S);
-    }
+ 
 
-    .fa-hands-helping{
-        font-size: 0.6em;
-    }
-}
