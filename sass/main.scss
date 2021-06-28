@@ -14,7 +14,7 @@ header, #explore, #fonctionnement, #restaurants, footer{
     padding: 0 1.2rem;
 }
 
-#map, #explore, #fonctionnment div, #containerRestaurants{
+#map, #explore, #containerRestaurants{
     display: flex;
 }
 
@@ -23,15 +23,10 @@ header, #explore, #fonctionnement, #restaurants, footer{
     align-items: center;
 }
 
-#map, #fonctionnement div{
-    justify-content: center;
-}
-
 //COLORS//
-#explore, #fonctionnement div, #restaurants{
+.sections__background--color{
     background-color: darken(#fff, 5);
 }
-
 
                         // ALL //
 header{
@@ -45,6 +40,11 @@ header{
     background-color: darken(#fff, 10);
     color: lighten(#000, 20);
     align-items: center;
+    justify-content: center;
+    i{
+        position: absolute;
+        left: 150px;
+    }
 }
 
 header, #explore{
@@ -52,19 +52,38 @@ header, #explore{
 }
 
 
+
+
                         //FONCTIONNEMENT//
 #fonctionnement{
     div{
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
+        box-shadow: $shadow;
+        border-radius: 1rem;
     }
 
-    #fonctionnementDegustez{
-        background-color: ligthen(map-get($colors, primary), 20);   //NON EFFECTIVE, TO CORRECT PLS//
-        color: map-get($colors, primary);
+    p{
+        background-color: map-get($colors, primary);
+        color: #fff;
+        border-radius: 2em;
+        padding: 0.1em 0.4em;
+        position: absolute;
+        left: 10px;
+    }
+
+    h2{
+        width: 13.5rem;
     }
 }
 
+#fonctionnementDegustez{
+    background-color: lighten(map-get($colors, primary), 35);   //NON EFFECTIVE, TO CORRECT PLS//
+    i{
+        color: map-get($colors, primary);
+    }
+}
 
                         //RESTAURANTS//
  
@@ -77,16 +96,46 @@ header, #explore{
         width: $img-width;
         border-radius: 1rem;
         overflow: hidden;
-        box-shadow: 2px 5px 5px grey;
+        box-shadow: $shadow;
+        background-color: #fff;
     }
     img{
         width: $img-width;
         height: 175px;
         object-fit: cover;
     }
-}                       
+}    
 
 
+figure{
+    position: relative;
+    div{
+        display: grid;
+        grid-template-columns: 7fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        line-height: 0;             //pas moins possible, dommage//
+        padding: 0.5rem;
+    }
 
+    i{
+        grid-column: 2;
+        grid-row: 1/3;
+        display: flex;
+        align-self: center;
+    }
+
+
+}
+
+.figure__nouveau--looksPosition{
+    background-color: map-get($colors, tertiary);
+    color: darken(map-get($colors, tertiary), 40);
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.15rem;
+    font-size: 0.9em;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
  
 
