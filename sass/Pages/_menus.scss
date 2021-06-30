@@ -5,12 +5,44 @@ header{
     }
 }
 
-#menu{
-    border-radius: 3rem 3rem 0 0;
-    header{
-        display: flex;
-        justify-content: space-between;  
+#banner{
+    img{
+        min-width: 375px;
+        height: 255px;
+        object-fit: cover;
     }
+}
+
+#sectionMenu{
+    border-radius: 3rem 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    header{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        border: black solid 1px;
+    }
+    h1{
+        font-family: 'shrikhand';
+    }
+    h2 + p{
+        margin-top: -1.5rem;
+        color: map-get($colors, tertiary);
+        font-family: 'robotoMedium';
+    }
+}
+
+#sectionMenu div div{
+    border: 1px solid black;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    width: 350px;
+    line-height: 0.5rem;
 }
 
 //inclure button dans section et align center everything//

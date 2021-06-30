@@ -87,7 +87,7 @@ header{
 }
 
 #fonctionnementDegustez{
-    background-color: lighten(map-get($colors, primary), 35);   //NON EFFECTIVE, TO CORRECT PLS//
+    background-color: lighten(map-get($colors, primary), 35);
     i{
         color: map-get($colors, primary);
     }
