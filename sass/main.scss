@@ -3,6 +3,7 @@
 @import "./Base/fonts";
 @import "./Composants/buttons";
 @import "./Layout/footer";
+@import "./Pages/menus";
 
 
 body{
@@ -31,8 +32,11 @@ header, #explore, #fonctionnement, #restaurants, footer{
                         // ALL //
 header{
     padding: 1rem 1.2rem 0.5rem 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     img{
         height: 2em;
+        grid-column: 2/3;
     }
 }
 
@@ -41,13 +45,17 @@ header{
     color: lighten(#000, 20);
     align-items: center;
     justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.8fr 1fr;
     i{
-        position: absolute;
-        left: 150px;
+        grid-column: 2/3;
+    }
+    p{
+        grid-column: 3/4;
     }
 }
 
-header, #explore{
+#explore{
     text-align: center;
 }
 

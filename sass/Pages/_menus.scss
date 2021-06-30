@@ -1,0 +1,16 @@
+header{
+    i{
+        color: lighten(#000, 20);
+        align-self: center;
+    }
+}
+
+#menu{
+    border-radius: 3rem 3rem 0 0;
+    header{
+        display: flex;
+        justify-content: space-between;  
+    }
+}
+
+//inclure button dans section et align center everything//
