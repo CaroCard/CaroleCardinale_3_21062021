@@ -7,7 +7,7 @@ header{
 
 #banner{
     img{
-        min-width: 375px;
+        width: 375px;
         height: 255px;
         object-fit: cover;
     }
@@ -20,29 +20,39 @@ header{
     align-items: center;
     position: relative;
     top: -50px;
+    width: 375px;
+    background-color: darken(#fff, 3);
     header{
-        width: 300px;
+        width: 335px;
         display: flex;
         justify-content: space-between;
-        border: black solid 1px;
     }
     h1{
         font-family: 'shrikhand';
+        font-size: map-get($font-size, XL);
+        font-weight: normal;
+    }
+    h2{
+        text-transform: uppercase;
     }
     h2 + p{
         margin-top: -1.5rem;
         color: map-get($colors, tertiary);
-        font-family: 'robotoMedium';
+        font-family: 'robotoRegular';
+        text-shadow: 0 1px 0 map-get($colors, tertiary);
     }
 }
 
-#sectionMenu div div{
-    border: 1px solid black;
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: $shadow;
-    width: 350px;
-    line-height: 0.5rem;
+#sectionMenu div{
+    margin-bottom: 1em;
+    div{
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        width: 350px;
+        line-height: 0.5rem;
+        margin-bottom: 0.7em;
+    }
 }
 
 //inclure button dans section et align center everything//

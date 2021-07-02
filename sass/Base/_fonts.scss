@@ -1,45 +1,45 @@
 @font-face
 {
     font-family: 'shrikhand';
-    src: url(../fonts/shrikhand/Shrikhand-Regular.otf)
+    src: url(../../fonts/shrikhand/Shrikhand-Regular.otf);
 }
 
 @font-face
 {
     font-family: 'robotoThin';
-    src: url(../fonts/roboto/Roboto-Thin.ttf)
+    src: url(../../fonts/roboto/Roboto-Thin.ttf);
 }
 
 @font-face
 {
     font-family: 'robotoRegular';
-    src: url(../fonts/roboto/Roboto-Regular.ttf)
-}
+    src: url(../../fonts/roboto/Roboto-Regular.ttf);
+} 
 
-@font-face
-{
-    font-family: 'robotoMedium';
-    src: url(../fonts/roboto/Roboto-Medium.ttf)
-}
 
-//POLICES & TAILLES//
+//POLICES & TAILLES TEXTES//
 body{
     font-family: 'robotoRegular';
 }
 
 h1{
     font-size: map-get($font-size, L);
-    font-family: 'robotoMedium';
 }
 
-h2, p, button, li{
-    font-size: map-get($font-size, M);
+h2, h3, p, button, li{
+    font-size: map-get($font-size, S);
 }
 
-p{
+//POLICE FONT SIZE 10px A INSTALLER//
+#sectionMenu div div p{
+    font-size: map-get($font-size, XS);
+}
+
+.font--thin{
     font-family: 'robotoThin';
 }
 
+//TAILLES ICONES//
 figure i{
     font-size: map-get($font-size, L);
 }
