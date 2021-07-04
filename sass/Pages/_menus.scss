@@ -7,7 +7,7 @@ header{
 
 #banner{
     img{
-        width: 375px;
+        width: 100%;
         height: 255px;
         object-fit: cover;
     }
@@ -15,15 +15,12 @@ header{
 
 #sectionMenu{
     border-radius: 3rem 3rem 0 0;
-    display: flex;
+    @extend %flex-align;
     flex-direction: column;
-    align-items: center;
     position: relative;
     top: -50px;
-    width: 375px;
     background-color: darken(#fff, 3);
     header{
-        width: 335px;
         display: flex;
         justify-content: space-between;
     }
@@ -45,14 +42,20 @@ header{
 
 #sectionMenu div{
     margin-bottom: 1em;
+    //gestion des plats//
     div{
         background: #fff;
-        border-radius: 1rem;
-        box-shadow: $shadow;
-        width: 350px;
+        border-radius: map-get($radius, M);
+        @include shadow(0.1);
         line-height: 0.5rem;
         margin-bottom: 0.7em;
     }
 }
 
 //inclure button dans section et align center everything//
+#buttonMenu{
+    background-color: darken(#fff, 3);
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}

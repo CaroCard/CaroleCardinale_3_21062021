@@ -4,5 +4,5 @@
 }
 
 @mixin shadow($opacity: 0.2){
-    box-shadow: 0 5px 15px rgba(#000000, $opacity);
+    box-shadow: 0 0.3rem 0.9rem rgba(#000000, 0.2);  //0.3 & 0.9 REM//
 }
