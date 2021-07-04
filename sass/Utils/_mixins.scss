@@ -2,3 +2,7 @@
     color: $color;
     text-decoration: $text-decoration;
 }
+
+@mixin shadow($opacity: 0.2){
+    box-shadow: 0 5px 15px rgba(#000000, $opacity);
+}
