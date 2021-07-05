@@ -20,6 +20,10 @@
     position: relative;
     top: -50px;
     background-color: darken(#fff, 3);
+    div{
+        margin-bottom: 1em;
+        width: $contentMenu-width;
+    }
     h1{
         font-family: 'shrikhand';
         font-size: map-get($font-size, XL);
@@ -39,32 +43,31 @@
 #headSectionMenu{
     display: grid;
     grid-template-columns: 6fr 1fr;
-    width: $content-width;
+    width: $contentMenu-width;
     i{
         align-self: center;
         font-size: map-get($icon-size, XL);
     }
 }
 
-#sectionMenu div{
-    margin-bottom: 1em;
-    width: $content-width;
-    //gestion des plats//
-    div{ //remplacer par une classe et ajouter une div pour les p//
-        background: #fff;
-        border-radius: map-get($radius, M);
-        box-shadow: $shadow rgba(#000, 0.1);
-        margin-bottom: 0.7em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.menu__plats{
+    background: #fff;
+    border-radius: map-get($radius, M);
+    box-shadow: $shadow rgba(#000, 0.1);
+    margin-bottom: 0.7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 1.5em;
     h3{
-        width: 100%;
+        width: 80%;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+    }
+    p{
+        margin: 0 0.5rem 0.5rem 0.5rem;
     }
 }
 
-//inclure button dans section et align center everything//
 #buttonMenu{
     background-color: darken(#fff, 3);
     margin-top: -50px;

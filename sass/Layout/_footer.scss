@@ -4,8 +4,9 @@ footer{
     flex-direction: column;
     background-color: lighten(#000, 20);
     color: #fff;
+    //pour maintenir le contenu au centre sans étalement//
     h3, ul{
-        width: $content-width;
+        width: $contentAccueil-width;
     }
     a{
         @include links(#fff);

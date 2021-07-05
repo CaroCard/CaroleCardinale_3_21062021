@@ -235,6 +235,10 @@ footer .fa-hands-helping {
   top: -50px;
   background-color: #f7f7f7;
 }
+#sectionMenu div {
+  margin-bottom: 1em;
+  width: 19rem;
+}
 #sectionMenu h1 {
   font-family: "shrikhand";
   font-size: 1.8em;
@@ -253,18 +257,14 @@ footer .fa-hands-helping {
 #headSectionMenu {
   display: grid;
   grid-template-columns: 6fr 1fr;
-  width: 18rem;
+  width: 19rem;
 }
 #headSectionMenu i {
   align-self: center;
   font-size: 1.5em;
 }
 
-#sectionMenu div {
-  margin-bottom: 1em;
-  width: 18rem;
-}
-#sectionMenu div div {
+.menu__plats {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
@@ -272,9 +272,14 @@ footer .fa-hands-helping {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  line-height: 1.5em;
 }
-#sectionMenu div h3 {
-  width: 100%;
+.menu__plats h3 {
+  width: 80%;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+.menu__plats p {
+  margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 #buttonMenu {

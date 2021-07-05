@@ -47,7 +47,7 @@ header{
     @extend %flex-align;
     flex-direction: column;
     h1, div{
-        width: $content-width;
+        width: $contentAccueil-width;
     }
     p{
         background-color: map-get($colors, primary);
@@ -95,7 +95,7 @@ header{
     @extend %flex-align;
     flex-direction: column;
     h1{
-        width: $content-width;
+        width: $contentAccueil-width;
     }
     a{
        @include links;
