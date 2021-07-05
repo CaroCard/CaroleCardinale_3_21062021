@@ -1,7 +1,7 @@
-header{
+#headerMenu{
     i{
         color: lighten(#000, 20);
-        align-self: center;
+        font-size: 1.2em;
     }
 }
 
@@ -14,16 +14,12 @@ header{
 }
 
 #sectionMenu{
-    border-radius: 3rem 3rem 0 0;
+    border-radius: 2rem 2rem 0 0;
     @extend %flex-align;
     flex-direction: column;
     position: relative;
     top: -50px;
     background-color: darken(#fff, 3);
-    header{
-        display: flex;
-        justify-content: space-between;
-    }
     h1{
         font-family: 'shrikhand';
         font-size: map-get($font-size, XL);
@@ -40,15 +36,31 @@ header{
     }
 }
 
+#headSectionMenu{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: $content-width;
+    i{
+        align-self: center;
+        font-size: map-get($icon-size, XL);
+    }
+}
+
 #sectionMenu div{
     margin-bottom: 1em;
+    width: $content-width;
     //gestion des plats//
-    div{
+    div{ //remplacer par une classe et ajouter une div pour les p//
         background: #fff;
         border-radius: map-get($radius, M);
-        @include shadow(0.1);
-        line-height: 0.5rem;
+        box-shadow: $shadow rgba(#000, 0.1);
         margin-bottom: 0.7em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    h3{
+        width: 100%;
     }
 }
 

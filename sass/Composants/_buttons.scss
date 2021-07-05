@@ -2,8 +2,13 @@ button{
     background: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));
     border: none;
     border-radius: 2rem;
-    @include shadow;
-    padding: 0.8rem 0.8rem;
-    color: white;
-    min-width: 10em;
+    box-shadow: $shadow rgba(#000, 0.2);
+    color: #fff;
+    width: 12rem;
+    height: 3rem;
+    &:hover{
+        box-shadow: $shadow rgba(#000, 0.5);
+        background: linear-gradient(to bottom right, lighten(map-get($colors, secondary), 10), lighten(map-get($colors, primary), 10));
+    }
 }
+

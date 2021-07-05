@@ -1,7 +1,12 @@
 //FOOTER//
 footer{
+    @extend %flex-align;
+    flex-direction: column;
     background-color: lighten(#000, 20);
     color: #fff;
+    h3, ul{
+        width: $content-width;
+    }
     a{
         @include links(#fff);
     }
