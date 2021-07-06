@@ -47,6 +47,12 @@
     i{
         align-self: center;
         font-size: map-get($icon-size, XL);
+        color: darken(#fff, 3);
+        text-shadow: $heart-border;  //contour précis du coeur côté par côté//
+        transition: color 0.2s;
+        &:hover, &:active{
+            color: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));        
+        }
     }
 }
 
@@ -71,6 +77,7 @@
 #buttonMenu{
     background-color: darken(#fff, 3);
     margin-top: -50px;
+    padding: 1rem 0 4rem 0;
     display: flex;
     justify-content: center;
 }
