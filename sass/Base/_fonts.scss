@@ -1,17 +1,14 @@
-@font-face
-{
+@font-face{
     font-family: 'shrikhand';
     src: url(../../fonts/shrikhand/Shrikhand-Regular.otf);
 }
 
-@font-face
-{
+@font-face{
     font-family: 'robotoThin';
     src: url(../../fonts/roboto/Roboto-Thin.ttf);
 }
 
-@font-face
-{
+@font-face{
     font-family: 'robotoRegular';
     src: url(../../fonts/roboto/Roboto-Regular.ttf);
 } 
@@ -26,12 +23,12 @@ h1{
     font-size: map-get($font-size, L);
 }
 
-h2, h3, p, button, li{
+h2, h3, p, button{
     font-size: map-get($font-size, S);
 }
 
-//POLICE FONT SIZE 10px A INSTALLER//
-#sectionMenu div div p{
+//Classe div A INSTALLER//
+#sectionMenu div div p, #map p, li{
     font-size: map-get($font-size, XS);
 }
 
