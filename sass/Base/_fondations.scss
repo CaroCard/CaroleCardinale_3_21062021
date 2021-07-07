@@ -145,17 +145,6 @@ figure{
     }
 }
 
-.figure__nouveau--looksPosition{
-    background-color: map-get($colors, tertiary);
-    color: darken(map-get($colors, tertiary), 40);
-    padding: 0.3rem 0.5rem;
-    border-radius: map-get($radius, S);
-    font-size: map-get($font-size, XS);
-    position: absolute;
-    right: 14px;
-    top: 14px;
-}
-
 .div--padding{
     padding: 1.5rem 0 3rem 0;
 }

@@ -27,11 +27,11 @@ h1 {
   font-size: 1.5em;
 }
 
-h2, h3, p, button {
+h2, h3, p, button, li {
   font-size: 1.1em;
 }
 
-#sectionMenu div div p, #map p, li {
+#sectionMenu div div p, #map p {
   font-size: 0.9em;
 }
 
@@ -166,17 +166,6 @@ figure h2, figure p {
   margin: 0.8rem 0;
 }
 
-.figure__nouveau--looksPosition {
-  background-color: #99E2D0;
-  color: #278870;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.15rem;
-  font-size: 0.9em;
-  position: absolute;
-  right: 14px;
-  top: 14px;
-}
-
 .div--padding {
   padding: 1.5rem 0 3rem 0;
 }
@@ -193,6 +182,17 @@ button {
 button:hover {
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.5);
   background: linear-gradient(to bottom right, #fface8, #ae80e5);
+}
+
+.figure__nouveau--looksPosition {
+  background-color: #99E2D0;
+  color: #278870;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.15rem;
+  font-size: 0.9em;
+  position: absolute;
+  right: 14px;
+  top: 14px;
 }
 
 footer {

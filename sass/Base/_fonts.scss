@@ -23,12 +23,12 @@ h1{
     font-size: map-get($font-size, L);
 }
 
-h2, h3, p, button{
+h2, h3, p, button, li{
     font-size: map-get($font-size, S);
 }
 
 //Classe div A INSTALLER//
-#sectionMenu div div p, #map p, li{
+#sectionMenu div div p, #map p{
     font-size: map-get($font-size, XS);
 }
 
