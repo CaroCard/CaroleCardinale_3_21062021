@@ -32,12 +32,9 @@
     }
     h2{
         text-transform: uppercase;
-    }
-    h2 + p{
-        margin-top: -1.5rem;
-        color: map-get($colors, tertiary);
-        font-family: 'robotoRegular';
-        text-shadow: 0 1px 0 map-get($colors, tertiary);
+        border-bottom: 3px solid map-get($colors, tertiary);
+        width: 13%;
+        padding-bottom: 0.3rem;
     }
 }
 
@@ -57,6 +54,7 @@
     }
 }
 
+//div plats// 
 .menu__plats{
     background: #fff;
     border-radius: map-get($radius, M);
