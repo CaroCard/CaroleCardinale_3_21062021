@@ -1,8 +1,21 @@
 #headerMenu{
-    i{
-        color: lighten(#000, 20);
-        font-size: 1.2em;
-        padding-top: 0.3em;
+    display: flex;
+    justify-content: center;
+    div{
+        width: map-get($menuPageWidths, base);
+        display: flex;
+        justify-content: center;
+        @include mediaTablet{
+            width: map-get($menuPageWidths, tablet);
+        }
+        i{
+            color: lighten(#000, 20);
+            font-size: 1.2em;
+        }
+        a{
+            align-self: center;
+            justify-self: flex-start;
+        }
     }
 }
 
@@ -14,6 +27,7 @@
     }
 }
 
+//ENTIRE MENU//
 #sectionMenu{
     border-radius: 2rem 2rem 0 0;
     @extend %flex-align;
@@ -21,27 +35,28 @@
     position: relative;
     top: -50px;
     background-color: darken(#fff, 3);
-    div{
-        margin-bottom: 1em;
-        width: $contentMenu-width;
-    }
+    //title && categories = all divs// 
+    #containerMenu{
+        width: map-get($menuPageWidths, base);
+        @include mediaTablet{
+            width: map-get($menuPageWidths, tablet);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    } 
+}
+
+//TITLE MENU//
+#headSectionMenu{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    width: map-get($menuPageWidths, base);
     h1{
         font-family: 'shrikhand';
         font-size: map-get($font-size, XL);
         font-weight: normal;
     }
-    h2{
-        text-transform: uppercase;
-        border-bottom: 3px solid map-get($colors, tertiary);
-        width: 13%;
-        padding-bottom: 0.3rem;
-    }
-}
-
-#headSectionMenu{
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-    width: $contentMenu-width;
     i{
         align-self: center;
         font-size: map-get($icon-size, XL);
@@ -49,29 +64,41 @@
         text-shadow: $heart-border;  //contour précis du coeur côté par côté//
         transition: color 0.2s;
         &:hover, &:active{
-            color: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));        
+            color: pink;        
         }
     }
 }
 
-//div plats// 
-.menu__plats{
-    background: #fff;
-    border-radius: map-get($radius, M);
-    box-shadow: $shadow rgba(#000, 0.1);
-    margin-bottom: 0.7em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    line-height: 1.5em;
-    h3{
-        width: 80%;
-        margin: 0.5rem 0.5rem 0 0.5rem;
+
+//CATEGORIES && ALL DISHES//
+.menu__categories{
+    margin-bottom: 1em;
+    width: map-get($menuPageWidths, base);
+    h2{
+        text-transform: uppercase;
+        border-bottom: 3px solid map-get($colors, tertiary);
+        width: 2.5rem;
+        padding-bottom: 0.3rem;
     }
-    p{
-        margin: 0 0.5rem 0.5rem 0.5rem;
+    .menu__categories__dishes{
+        background: #fff;
+        border-radius: map-get($radius, M);
+        box-shadow: $shadow rgba(#000, 0.1);
+        margin-bottom: 0.7em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        line-height: 1.5em;
+        h3{
+            width: 80%;
+            margin: 0.5rem 0.5rem 0 0.5rem;
+        }
+        p{
+            margin: 0 0.5rem 0.5rem 0.5rem;
+        }
     }
 }
+
 
 #buttonMenu{
     background-color: darken(#fff, 3);

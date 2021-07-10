@@ -7,7 +7,10 @@ footer{
     padding: 1.25rem 0;
     //pour maintenir le contenu au centre sans étalement//
     h3, ul{
-        width: $contentAccueil-width;
+        width: map-get($welcomePageWidths, base);
+        @include mediaTablet{
+            width: map-get($welcomePageWidths, tablet);
+        }
     }
     a{
         @include links(#fff);
