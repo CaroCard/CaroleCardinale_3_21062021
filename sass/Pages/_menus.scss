@@ -1,3 +1,9 @@
+body{
+    @include mediaLaptop{
+        max-width: 90rem;
+    } 
+}
+
 #headerMenu{
     display: flex;
     justify-content: center;
@@ -7,6 +13,9 @@
         justify-content: center;
         @include mediaTablet{
             width: map-get($menuPageWidths, tablet);
+        }
+        @include mediaLaptop{
+            width: map-get($menuPageWidths, laptop);
         }
         i{
             color: lighten(#000, 20);
@@ -24,6 +33,12 @@
         width: 100%;
         height: 255px;
         object-fit: cover;
+        @include mediaTablet{
+            height: 320px;
+        }
+        @include mediaLaptop{
+            height: 355px;
+        } 
     }
 }
 
@@ -35,7 +50,35 @@
     position: relative;
     top: -50px;
     background-color: darken(#fff, 3);
-    //title && categories = all divs// 
+    //TITLE MENU//
+    #headSectionMenu{
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        width: map-get($menuPageWidths, base);
+        @include mediaLaptop{
+            width: map-get($menuPageWidths, laptop);
+            grid-template-columns: 25% 1fr;
+        }
+        h1{
+            font-family: 'shrikhand';
+            font-size: map-get($font-size, XL);
+            font-weight: normal;
+        }
+        i{
+            align-self: center;
+            font-size: map-get($icon-size, XL);
+            color: darken(#fff, 3);
+            text-shadow: $heart-border;  //contour précis du coeur côté par côté//
+            transition: color 0.4s;
+            &:hover, &:active{
+                color: pink;
+            }
+            @include mediaLaptop{
+                font-size: map-get($icon-size, XXL);
+            }
+        }
+    }
+    //categories = all divs, title included// 
     #containerMenu{
         width: map-get($menuPageWidths, base);
         @include mediaTablet{
@@ -44,30 +87,14 @@
             flex-wrap: wrap;
             justify-content: space-around;
         }
+        @include mediaLaptop{
+            width: map-get($menuPageWidths, laptop);
+            flex-direction: column;
+        }
     } 
 }
 
-//TITLE MENU//
-#headSectionMenu{
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-    width: map-get($menuPageWidths, base);
-    h1{
-        font-family: 'shrikhand';
-        font-size: map-get($font-size, XL);
-        font-weight: normal;
-    }
-    i{
-        align-self: center;
-        font-size: map-get($icon-size, XL);
-        color: darken(#fff, 3);
-        text-shadow: $heart-border;  //contour précis du coeur côté par côté//
-        transition: color 0.2s;
-        &:hover, &:active{
-            color: pink;        
-        }
-    }
-}
+
 
 
 //CATEGORIES && ALL DISHES//
@@ -77,10 +104,21 @@
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid map-get($colors, tertiary);
-        width: 2.5rem;
+        width: 2.5rem; //deals with the border, text in overflow//
         padding-bottom: 0.3rem;
+        @include mediaLaptop{
+            padding-bottom: 1rem;
+        }
     }
-    .menu__categories__dishes{
+    &__container{
+        @include mediaLaptop{
+            width: map-get($menuPageWidths, laptop);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    &__dishes{
         background: #fff;
         border-radius: map-get($radius, M);
         box-shadow: $shadow rgba(#000, 0.1);
@@ -89,6 +127,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         line-height: 1.5em;
+        width: map-get($menuPageWidths, base);
         h3{
             width: 80%;
             margin: 0.5rem 0.5rem 0 0.5rem;

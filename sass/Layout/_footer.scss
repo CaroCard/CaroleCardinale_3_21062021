@@ -11,6 +11,9 @@ footer{
         @include mediaTablet{
             width: map-get($welcomePageWidths, tablet);
         }
+        @include mediaLaptop{
+            width: map-get($welcomePageWidths, laptop);
+        }
     }
     a{
         @include links(#fff);
@@ -25,6 +28,10 @@ footer{
 
     ul{
         padding: 0;
+        @include mediaLaptop{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     li{
