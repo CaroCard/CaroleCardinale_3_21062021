@@ -118,22 +118,51 @@ body{
             justify-content: space-between;
         }
     }
+    .dishAndCheck{
+        display: flex;
+    }
     &__dishes{
         background: #fff;
         border-radius: map-get($radius, M);
         box-shadow: $shadow rgba(#000, 0.1);
         margin-bottom: 0.7em;
+        padding: 0.5rem;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         line-height: 1.5em;
         width: map-get($menuPageWidths, base);
-        h3{
-            width: 80%;
-            margin: 0.5rem 0.5rem 0 0.5rem;
+        .dishText{
+            display: grid;
+            grid-template-columns: 98% 2%;
+            grid-template-rows: repeat(2, 1fr);
+            *{
+                margin: 0;
+            }
+            
+            p{
+                grid-row: 2/3;
+            }
+            .dish__price{
+            }
         }
-        p{
-            margin: 0 0.5rem 0.5rem 0.5rem;
+
+        &:active{
+            color: pink;
+            text-transform: uppercase;
+            transition: color 1s;
+        }
+
+    }
+    .dishChecked{
+        background-color: map-get($colors, tertiary);
+        @extend %flex-align;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        i{
+            color: map-get($colors, tertiary);
+            border-radius: map-get($radius, M);
+            background-color: #fff;
+            padding: 0.2rem;
         }
     }
 }

@@ -1,4 +1,4 @@
-#sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
+.menu__categories .dishChecked, #sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
   display: flex;
   align-items: center;
 }
@@ -201,8 +201,12 @@ header img {
   grid-row: 1/3;
   display: flex;
   align-self: center;
-  color: #fff;
   text-shadow: 0.7px 1px black, -0.7px -1px black, 1px -0.7px black, -1px 0.7px black;
+}
+#restaurants figure .fas-heart {
+  background: -webkit-linear-gradient(top left, #000, #03a9f4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #restaurants figure h2, #restaurants figure p {
   margin: 0.8rem 0;
@@ -423,23 +427,46 @@ footer .fa-hands-helping {
     justify-content: space-between;
   }
 }
+.menu__categories .dishAndCheck {
+  display: flex;
+}
 .menu__categories__dishes {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
   margin-bottom: 0.7em;
+  padding: 0.5rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   line-height: 1.5em;
   width: 19rem;
 }
-.menu__categories__dishes h3 {
-  width: 80%;
-  margin: 0.5rem 0.5rem 0 0.5rem;
+.menu__categories__dishes .dishText {
+  display: grid;
+  grid-template-columns: 98% 2%;
+  grid-template-rows: repeat(2, 1fr);
 }
-.menu__categories__dishes p {
-  margin: 0 0.5rem 0.5rem 0.5rem;
+.menu__categories__dishes .dishText * {
+  margin: 0;
+}
+.menu__categories__dishes .dishText p {
+  grid-row: 2/3;
+}
+.menu__categories__dishes:active {
+  color: pink;
+  text-transform: uppercase;
+  transition: color 1s;
+}
+.menu__categories .dishChecked {
+  background-color: #99E2D0;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+.menu__categories .dishChecked i {
+  color: #99E2D0;
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 0.2rem;
 }
 
 #buttonMenu {
