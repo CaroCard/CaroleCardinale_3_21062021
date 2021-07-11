@@ -67,18 +67,6 @@ header{
             width: map-get($welcomePageWidths, laptop);
         }
     }
-    p{
-        background-color: map-get($colors, primary);
-        color: #fff;
-        border-radius: map-get($radius, L);
-        padding: 0.1em 0.45em;
-        position: absolute;
-        left: -10px;
-    }
-    i{
-        font-size: map-get($icon-size, L);
-        color: darken(#fff, 50);
-    }
 }
 
 #containerFonctionnement{
@@ -94,12 +82,30 @@ header{
     }
     div{
         width: map-get($welcomePageWidths, base);
-        @extend %flex-align;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 25% 80%;
         box-shadow: $shadow rgba(#000, 0.2);
         border-radius: map-get($radius, M);
+        padding: 0.5rem 0 0.5rem 0.5em;
         position: relative;
-        padding: 0.5rem 0 0.5rem 0; 
+    }
+    p{
+        background-color: map-get($colors, primary);
+        color: #fff;
+        border-radius: map-get($radius, L);
+        padding: 0.1em 0.45em;
+        position: absolute;
+        left: -10px;
+        top: 4px;
+    }
+    i{
+        font-size: map-get($icon-size, L);
+        color: darken(#fff, 50);
+        @extend %flex-align;
+        justify-content: center;
+    }
+    h2{
+        @extend %flex-align;
     }
 }
 
@@ -130,9 +136,8 @@ header{
         }
     }
     #containerRestaurants{
-        @extend %flex-align;
-        @extend %flex-column;
         @include mediaTablet{
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;

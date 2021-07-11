@@ -1,9 +1,9 @@
-#sectionMenu, footer, #restaurants #containerRestaurants, #restaurants, #containerFonctionnement div, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
+#sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
   display: flex;
   align-items: center;
 }
 
-#restaurants #containerRestaurants, #mapExplore #explore {
+#mapExplore #explore {
   flex-direction: column;
 }
 
@@ -91,18 +91,6 @@ header img {
     width: 65rem;
   }
 }
-#fonctionnement p {
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 2rem;
-  padding: 0.1em 0.45em;
-  position: absolute;
-  left: -10px;
-}
-#fonctionnement i {
-  font-size: 1.25em;
-  color: gray;
-}
 
 #containerFonctionnement {
   display: grid;
@@ -120,13 +108,27 @@ header img {
 }
 #containerFonctionnement div {
   width: 18rem;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 25% 80%;
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+  padding: 0.5rem 0 0.5rem 0.5em;
   position: relative;
-  padding: 0.5rem 0 0.5rem 0;
 }
-
+#containerFonctionnement p {
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.1em 0.45em;
+  position: absolute;
+  left: -10px;
+  top: 4px;
+}
+#containerFonctionnement i {
+  font-size: 1.25em;
+  color: gray;
+  justify-content: center;
+}
 #fonctionnementDegustez {
   background-color: #f2eafb;
 }
@@ -157,6 +159,7 @@ header img {
 }
 @media screen and (min-width: 50em) {
   #restaurants #containerRestaurants {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
