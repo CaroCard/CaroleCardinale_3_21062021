@@ -1,4 +1,4 @@
-.menu__categories .dishChecked, #sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
+.dishChecked, #sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
   display: flex;
   align-items: center;
 }
@@ -298,12 +298,6 @@ footer .fa-hands-helping {
   font-size: 0.6em;
 }
 
-@media screen and (min-width: 70em) {
-  body {
-    max-width: 90rem;
-  }
-}
-
 #headerMenu {
   display: flex;
   justify-content: center;
@@ -386,12 +380,8 @@ footer .fa-hands-helping {
     font-size: 2em;
   }
 }
-#sectionMenu #containerMenu {
-  width: 19rem;
-}
 @media screen and (min-width: 50em) {
   #sectionMenu #containerMenu {
-    width: 45rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -406,7 +396,6 @@ footer .fa-hands-helping {
 
 .menu__categories {
   margin-bottom: 1em;
-  width: 19rem;
 }
 .menu__categories h2 {
   text-transform: uppercase;
@@ -427,46 +416,62 @@ footer .fa-hands-helping {
     justify-content: space-between;
   }
 }
-.menu__categories .dishAndCheck {
+
+.dishAndCheck {
   display: flex;
 }
-.menu__categories__dishes {
+
+.menu__categories__dish {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
   margin-bottom: 0.7em;
   padding: 0.5rem;
-  display: flex;
   line-height: 1.5em;
   width: 19rem;
-}
-.menu__categories__dishes .dishText {
   display: grid;
-  grid-template-columns: 98% 2%;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 90% 10%;
+  grid-template-rows: repeat(2, 1.5rem);
 }
-.menu__categories__dishes .dishText * {
+.menu__categories__dish * {
   margin: 0;
 }
-.menu__categories__dishes .dishText p {
+.menu__categories__dish p {
   grid-row: 2/3;
+  text-overflow: ellipsis;
 }
-.menu__categories__dishes:active {
+.menu__categories__dish .dish__price {
+  transition: all 0.4s 0.1s;
+}
+.menu__categories__dish:hover .dish__price {
   color: pink;
+  transform: translateX(-4em);
   text-transform: uppercase;
-  transition: color 1s;
 }
-.menu__categories .dishChecked {
+
+.dishChecked {
   background-color: #99E2D0;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  visibility: visible;
+  transition-timing-function: ease-in-out;
+  transition: all 0.4s 0.1s;
 }
-.menu__categories .dishChecked i {
+.dishChecked i {
   color: #99E2D0;
   border-radius: 1rem;
   background-color: #fff;
   padding: 0.2rem;
+  font-size: 1em;
+}
+.dishChecked:hover {
+  transform: translateX(-4em);
+}
+.dishChecked:hover i {
+  transform: rotate(1turn);
+  transition: all 0.4s 0.1s;
 }
 
 #buttonMenu {
