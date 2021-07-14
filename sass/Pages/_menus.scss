@@ -36,7 +36,7 @@
     }
 }
 
-//ENTIRE MENU//
+//ENTIRE MENU
 #sectionMenu{
     border-radius: 2rem 2rem 0 0;
     @extend %flex-align;
@@ -44,7 +44,7 @@
     position: relative;
     top: -50px;
     background-color: darken(#fff, 3);
-    //TITLE MENU//
+    //TITLE MENU
     #headSectionMenu{
         display: grid;
         grid-template-columns: 6fr 1fr;
@@ -65,14 +65,17 @@
             text-shadow: $heart-border;  //contour précis du coeur côté par côté//
             transition: color 0.4s;
             &:hover, &:active{
-                color: pink;
+                color: transparent;
+                background: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));
+                background-clip: text;
             }
+
             @include mediaLaptop{
                 font-size: map-get($icon-size, XXL);
             }
         }
     }
-    //categories = all divs, title included// 
+    //categories = all divs, title included
     #containerMenu{
         @include mediaTablet{
             display: flex;
@@ -88,8 +91,7 @@
 
 
 
-
-//CATEGORIES && ALL DISHES//
+//CATEGORIES && ALL DISHES
 .menu__categories{
     margin-bottom: 1em;
     h2{
@@ -109,13 +111,13 @@
             justify-content: space-between;
         }
     }
-
 }
 
-        //div having visible div of the dish and sliding div when checked
-        .dishAndCheck{
-            display: flex;
-        }
+//div having visible div of the dish and sliding div when checked
+.dishAndCheck{
+    display: flex;
+}
+
 .menu__categories__dish{
     background: #fff;
     border-radius: map-get($radius, M);
@@ -132,21 +134,25 @@
     }
     p{
         grid-row: 2/3;
-        text-overflow: ellipsis;
     }
+    .text--ellipsis{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: transform 0.4s 0.1s;
+        border: 1px solid black;
+    }
+
     .dish__price{
         transition: all 0.4s 0.1s;
     }
-    //A CORRIGER AVEC LA BONNE CLASSE, ICI EN ATTENDANT TESTS//
+    //A CORRIGER AVEC LA BONNE CLASSE, ICI EN ATTENDANT TESTS
     &:hover .dish__price{
         color: pink;
         transform: translateX(-4em);
         text-transform: uppercase;
     }
 }
-
-
-
 
 .dishChecked{
     background-color: map-get($colors, tertiary);
@@ -176,7 +182,6 @@
     }
     
 }
-
 
 #buttonMenu{
     background-color: darken(#fff, 3);

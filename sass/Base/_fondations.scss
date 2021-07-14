@@ -7,6 +7,26 @@ body{
     }
 }
 
+#spinner{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: 10rem;
+        color: map-get($colors, tertiary);
+        background-color: darken(rgba(#fff, 0.5), 10,);
+        transition: transform 1s;
+       /* &:hover{
+            transform: rotate(1turn);
+       }
+        }*/
+    }
+
 //COLORS//
 .sections__background--color{
     background-color: darken(#fff, 5);
@@ -195,3 +215,4 @@ header{
 .div--padding{
     padding: 1.5rem 0 3rem 0;
 }
+
