@@ -1,12 +1,15 @@
 $colors: (primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
 
 $font-size: (XL: 1.8em, L: 1.5em, M: 1.3em, S: 1.1em, XS: 0.9em);
-$icon-size: (XXL: 2em, XL: 1.5em, L: 1.25em, M: 1em, S: 0.9em, XS: 0.6em); //cela a-t-il du sens?//
+$icon-size: (XXL: 2em, XL: 1.5em, L: 1.25em, M: 1em, S: 0.9em, XS: 0.6em); //cela a-t-il du sens? VOIR POUR MELT WITH FONT-SIZES
 
 $logo-width: 10rem;
 
-$img-width: 18rem;          //width of img defines width of figure//
-$img-height: 9.3rem;
+$img-width: 100%;          //width of img defines width of figure//
+$img-height: 9.3em;
 
 $radius: (L: 2rem, M: 1rem, S: 0.15rem); //2 for round, 0.15 for "nouveau"//
 

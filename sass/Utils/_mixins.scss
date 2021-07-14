@@ -3,14 +3,34 @@
     text-decoration: $text-decoration;
 }
 
+//MEDIA QUERIES
 @mixin mediaTablet{
     @media screen and(min-width: map-get($breakpoints, tablet)){
         @content;
     }
 }
-
 @mixin mediaLaptop{
     @media screen and(min-width: map-get($breakpoints, laptop)){
         @content;
     }
+}
+
+//background darken
+@mixin back_darken($color: #fff, $degree: 3){
+    background-color: darken($color, $degree);
+}
+
+//color lighten
+@mixin color_darken($color: #fff, $degree: 3){
+    color: darken($color, $degree);
+}
+
+@mixin box_shadow($opacity: 0.2){
+    box-shadow: $shadow rgba(#000, $opacity);
+}
+
+@mixin img_sizing($width: 100%, $height: 100%){
+    width: $width;
+    height: $height;
+    object-fit: cover;
 }

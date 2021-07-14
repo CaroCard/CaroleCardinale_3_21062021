@@ -12,7 +12,7 @@
             width: map-get($menuPageWidths, laptop);
         }
         i{
-            color: lighten(#000, 20);
+            @include color_darken($degree: 80);
             font-size: 1.2em;
         }
         a{
@@ -24,9 +24,7 @@
 
 #banner{
     img{
-        width: 100%;
-        height: 255px;
-        object-fit: cover;
+        @include img_sizing($height: 255px);
         @include mediaTablet{
             height: 320px;
         }
@@ -43,7 +41,7 @@
     flex-direction: column;
     position: relative;
     top: -50px;
-    background-color: darken(#fff, 3);
+    @include back_darken($degree: 3);
     //TITLE MENU
     #headSectionMenu{
         display: grid;
@@ -61,12 +59,12 @@
         i{
             align-self: center;
             font-size: map-get($icon-size, XL);
-            color: darken(#fff, 3);
-            text-shadow: $heart-border;  //contour précis du coeur côté par côté//
+            color: #000;
+            //text-shadow: $heart-border;  //contour précis du coeur côté par côté//
             transition: color 0.4s;
             &:hover, &:active{
                 color: transparent;
-                background: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));
+                background: linear-gradient(to bottom right, $secondary, $primary);
                 background-clip: text;
             }
 
@@ -96,7 +94,7 @@
     margin-bottom: 1em;
     h2{
         text-transform: uppercase;
-        border-bottom: 3px solid map-get($colors, tertiary);
+        border-bottom: 3px solid $tertiary;
         width: 2.5rem; //deals with the border, text in overflow//
         padding-bottom: 0.3rem;
         @include mediaLaptop{
@@ -121,7 +119,7 @@
 .menu__categories__dish{
     background: #fff;
     border-radius: map-get($radius, M);
-    box-shadow: $shadow rgba(#000, 0.1);
+    @include box-shadow(0.1);
     margin-bottom: 0.7em;
     padding: 0.5rem;
     line-height: 1.5em;
@@ -155,7 +153,7 @@
 }
 
 .dishChecked{
-    background-color: map-get($colors, tertiary);
+    background-color: $tertiary;
     @extend %flex-align;
     justify-content: center;
     width: 4rem;
@@ -165,7 +163,7 @@
     transition-timing-function: ease-in-out;
     transition: all 0.4s 0.1s;
     i{
-        color: map-get($colors, tertiary);
+        color: $tertiary;
         border-radius: map-get($radius, M);
         background-color: #fff;
         padding: 0.2rem;
@@ -184,7 +182,7 @@
 }
 
 #buttonMenu{
-    background-color: darken(#fff, 3);
+    @include back_darken($degree: 3);
     margin-top: -50px;
     padding: 1rem 0 4rem 0;
     display: flex;

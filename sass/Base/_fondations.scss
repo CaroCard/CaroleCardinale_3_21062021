@@ -3,36 +3,41 @@ body{
     width: 100%;
     @include mediaLaptop{
         max-width: 90rem;
-        box-shadow: $shadow rgba(#000, 0.2);
+        @include box-shadow;
     }
 }
-
-#spinner{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        font-size: 10rem;
-        color: map-get($colors, tertiary);
-        background-color: darken(rgba(#fff, 0.5), 10,);
-        transition: transform 1s;
-       /* &:hover{
-            transform: rotate(1turn);
-       }
-        }*/
-    }
 
 //COLORS//
 .sections__background--color{
-    background-color: darken(#fff, 5);
+    @include back_darken($degree: 5);
 }
 
-                        // ALL //
+                        // ALL
+
+#spinner{
+    //POSITION
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    //DISPLAY margin:auto not working for some reason aha...aha...aha...
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //LOOKS
+    font-size: 8rem;
+    color: $tertiary;
+    background-color: darken(rgba(#fff, 0.5), 80);
+    visibility: hidden;
+    //ANIMATION
+    transition: transform 1s;
+    //before pour le background si traitement de couleur pendant l'animation
+    /* &:hover{
+        transform: rotate(1turn);
+    }*/
+}
 header{
     padding: 0.7rem;
     text-align: center;
@@ -43,8 +48,8 @@ header{
 
 #mapExplore{
     #map{
-        background-color: darken(#fff, 8);
-        color: lighten(#000, 20);
+        @include back_darken($degree: 8);
+        @include color_darken($degree: 80);
         @extend %flex-align;
         justify-content: center;
         box-shadow: inset 0 3px 3px 0 rgba(#000, 0.1);
@@ -104,13 +109,13 @@ header{
         width: map-get($welcomePageWidths, base);
         display: grid;
         grid-template-columns: 25% 80%;
-        box-shadow: $shadow rgba(#000, 0.2);
+        @include box-shadow;
         border-radius: map-get($radius, M);
         padding: 0.5rem 0 0.5rem 0.5em;
         position: relative;
     }
     p{
-        background-color: map-get($colors, primary);
+        background-color: $primary;
         color: #fff;
         border-radius: map-get($radius, L);
         padding: 0.1em 0.45em;
@@ -120,7 +125,7 @@ header{
     }
     i{
         font-size: map-get($icon-size, L);
-        color: darken(#fff, 50);
+        @include color_darken($degree: 50);
         @extend %flex-align;
         justify-content: center;
     }
@@ -130,9 +135,9 @@ header{
 }
 
 #fonctionnementDegustez{
-    background-color: lighten(map-get($colors, primary), 35);
+    background-color: lighten($primary, 35);
     i{
-        color: map-get($colors, primary);
+        color: $primary;
     }
 }
 
@@ -170,10 +175,10 @@ header{
     }
     figure{
         margin: 0 0 1.2rem 0; //corrige default margin-left//
-        width: $img-width;
+        width: map-get($welcomePageWidths, base);
         border-radius: map-get($radius, M);
         overflow: hidden;   //removes img corners//
-        box-shadow: $shadow rgba(#000000, 0.2);
+        @include box-shadow;
         background-color: #fff;
         position: relative;
         @include mediaTablet{
@@ -196,18 +201,11 @@ header{
             align-self: center;
             text-shadow: $heart-border;
         }
-        .fas-heart{
-            background : -webkit-linear-gradient(top left, #000,#03a9f4);
-            background-clip : text;
-            -webkit-text-fill-color : transparent;
-        }
         h2, p{
             margin: 0.8rem 0;
         }
         img{
-            width: $img-width;
-            height: $img-height;
-            object-fit: cover;
+            @include img_sizing($height: 150px);
         }
     }
 }    

@@ -2,7 +2,7 @@
 footer{
     @extend %flex-align;
     flex-direction: column;
-    background-color: lighten(#000, 20);
+    @include back_darken($degree: 80);
     color: #fff;
     padding: 1.25rem 0;
     //pour maintenir le contenu au centre sans étalement//

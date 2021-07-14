@@ -1,15 +1,15 @@
 button{
-    background: linear-gradient(to bottom right, map-get($colors, secondary), map-get($colors, primary));
+    background: linear-gradient(to bottom right, $secondary, $primary);
     border: none;
     border-radius: 2rem;
-    box-shadow: $shadow rgba(#000, 0.2);
+    @include box-shadow;
     color: #fff;
     width: 14rem;
     height: 3rem;
     margin-top: 1rem;
     &:hover{
-        box-shadow: $shadow rgba(#000, 0.5);
-        background: linear-gradient(to bottom right, lighten(map-get($colors, secondary), 10), lighten(map-get($colors, primary), 10));
+        @include box-shadow(0.5);
+        background: linear-gradient(to bottom right, lighten($secondary, 10), lighten($primary, 10));
     }
 }
 
