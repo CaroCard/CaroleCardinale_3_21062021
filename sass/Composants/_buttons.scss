@@ -1,7 +1,7 @@
 button{
     background: linear-gradient(to bottom right, $secondary, $primary);
     border: none;
-    border-radius: 2rem;
+    @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
     @include box-shadow;
     color: #fff;
     width: 14rem;

@@ -29,8 +29,23 @@
     box-shadow: $shadow rgba(#000, $opacity);
 }
 
+@mixin radius($N-W: 1em, $N-E: 1em, $S-E: 1em, $S-W: 1em){
+    border-radius: $N-W $N-E $S-E $S-W;
+                //north west, north east, south east, south west
+}
+
 @mixin img_sizing($width: 100%, $height: 100%){
     width: $width;
     height: $height;
     object-fit: cover;
 }
+//TO INSTALL IN PAGES AND ELSE, DO NOT FORGET "BEMS"
+@mixin position($type: absolute, $top:0, $bottom:0, $left:0, $right:0){
+    position: $type;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+//MIXINS FLEXBOX PLZ, placeholders to check

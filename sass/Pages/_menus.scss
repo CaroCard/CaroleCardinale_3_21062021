@@ -36,7 +36,7 @@
 
 //ENTIRE MENU
 #sectionMenu{
-    border-radius: 2rem 2rem 0 0;
+    @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
     @extend %flex-align;
     flex-direction: column;
     position: relative;
@@ -60,7 +60,6 @@
             align-self: center;
             font-size: map-get($icon-size, XL);
             color: #000;
-            //text-shadow: $heart-border;  //contour précis du coeur côté par côté//
             transition: color 0.4s;
             &:hover, &:active{
                 color: transparent;
@@ -95,7 +94,7 @@
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid $tertiary;
-        width: 2.5rem; //deals with the border, text in overflow//
+        width: 2.5em; //deals with the border, text in overflow//
         padding-bottom: 0.3rem;
         @include mediaLaptop{
             padding-bottom: 1rem;
@@ -118,7 +117,7 @@
 
 .menu__categories__dish{
     background: #fff;
-    border-radius: map-get($radius, M);
+    @include radius;
     @include box-shadow(0.1);
     margin-bottom: 0.7em;
     padding: 0.5rem;
@@ -126,7 +125,7 @@
     width: map-get($menuPageWidths, base);
     display: grid;
     grid-template-columns: 90% 10%;
-    grid-template-rows: repeat(2, 1.5rem);
+    grid-template-rows: repeat(2, 1.5em);
     *{
         margin: 0;
     }
@@ -156,15 +155,15 @@
     background-color: $tertiary;
     @extend %flex-align;
     justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0 1rem 1rem 0;
+    width: 4em;
+    height: 4em;
+    @include radius($N-W: 0, $N-E: 1, $S-E: 1, $S-W: 0);
     visibility: visible;
     transition-timing-function: ease-in-out;
     transition: all 0.4s 0.1s;
     i{
         color: $tertiary;
-        border-radius: map-get($radius, M);
+        @include radius;
         background-color: #fff;
         padding: 0.2rem;
         font-size: map-get($icon-size, M);

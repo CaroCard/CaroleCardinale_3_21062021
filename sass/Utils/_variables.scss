@@ -1,4 +1,3 @@
-$colors: (primary: #9356DC, secondary: #FF79DA, tertiary: #99E2D0);
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
@@ -6,25 +5,12 @@ $tertiary: #99E2D0;
 $font-size: (XL: 1.8em, L: 1.5em, M: 1.3em, S: 1.1em, XS: 0.9em);
 $icon-size: (XXL: 2em, XL: 1.5em, L: 1.25em, M: 1em, S: 0.9em, XS: 0.6em); //cela a-t-il du sens? VOIR POUR MELT WITH FONT-SIZES
 
-$logo-width: 10rem;
+$logo-width: 10em;
 
-$img-width: 100%;          //width of img defines width of figure//
-$img-height: 9.3em;
-
-$radius: (L: 2rem, M: 1rem, S: 0.15rem); //2 for round, 0.15 for "nouveau"//
-
-$shadow: 0 0.3rem 0.9rem;
+$shadow: 0 0.3em 0.9em; //used in shadow's mixin
 
 $breakpoints: (tablet: 50em, laptop: 70em);
+
+//rassembler le 2 widths en 1
 $welcomePageWidths: (base: 18rem, tablet: 40rem, laptop: 65rem);
 $menuPageWidths: (base: 19rem, tablet: 45rem, laptop: 65rem);
-
-
-
-
-
-//TESTS BELOW//
-//contour précis du coeur côté par côté: LEFT-down, UP-right, LEFT-down, UP-left//
-$heart-border: 0.7px 1px black, -0.7px -1px black, 1px -0.7px black, -1px 0.7px black;
-
-$hearty: 0.7px 2px black, -0.7px -0.9px black, 2px 0.7px black, -0.9px -0.7px black;
