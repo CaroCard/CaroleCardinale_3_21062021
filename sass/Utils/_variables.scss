@@ -14,3 +14,9 @@ $breakpoints: (tablet: 50em, laptop: 70em);
 //rassembler le 2 widths en 1
 $welcomePageWidths: (base: 18rem, tablet: 40rem, laptop: 65rem);
 $menuPageWidths: (base: 19rem, tablet: 45rem, laptop: 65rem);
+
+//ANIMATIONS
+
+//spinner
+$spin-time: 1.5s;
+$turns: 5turn;

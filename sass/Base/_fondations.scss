@@ -13,8 +13,8 @@ body{
 }
 
                         // ALL
-
-#spinner{
+#loading{
+    background-color: darken(rgba(#fff, 0.5), 80);
     //POSITION
     position: fixed;
     z-index: 1;
@@ -26,18 +26,38 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    animation: loading $spin-time;
+}
+@keyframes loading{
+    from{ 
+        visibility: visible;
+    }
+    to{
+        visibility: visible;
+    }
+
+}
+.spinner{
     //LOOKS
     font-size: 8em;
     color: $tertiary;
-    background-color: darken(rgba(#fff, 0.5), 80);
-    visibility: hidden;
     //ANIMATION
-    transition: transform 1s;
-    //before pour le background si traitement de couleur pendant l'animation
-    /* &:hover{
-        transform: rotate(1turn);
-    }*/
+    animation: spinner $spin-time 0.05s cubic-bezier(.42,.19,.52,.46);
 }
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0turn);
+    }
+    50%{
+        transform: rotate(5turns);
+    }
+    100%{
+        transform: rotate($turns);
+    }
+}
+
 header{
     padding: 0.7rem;
     text-align: center;

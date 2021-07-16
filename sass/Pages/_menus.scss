@@ -42,6 +42,7 @@
     position: relative;
     top: -50px;
     @include back_darken($degree: 3);
+    padding-bottom: 2em;
     //TITLE MENU
     #headSectionMenu{
         display: grid;
@@ -90,7 +91,7 @@
 
 //CATEGORIES && ALL DISHES
 .menu__categories{
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid $tertiary;
@@ -157,7 +158,7 @@
     justify-content: center;
     width: 4em;
     height: 4em;
-    @include radius($N-W: 0, $N-E: 1, $S-E: 1, $S-W: 0);
+    @include radius($N-W: 0, $N-E: 1em, $S-E: 1em, $S-W: 0);
     visibility: visible;
     transition-timing-function: ease-in-out;
     transition: all 0.4s 0.1s;
@@ -182,8 +183,9 @@
 
 #buttonMenu{
     @include back_darken($degree: 3);
-    margin-top: -50px;
-    padding: 1rem 0 4rem 0;
+    margin-top: -100px;
+
+    padding: 3rem 0 4rem 0;
     display: flex;
     justify-content: center;
 }
