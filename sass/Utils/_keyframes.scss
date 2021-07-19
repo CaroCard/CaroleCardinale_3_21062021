@@ -1,0 +1,37 @@
+@keyframes spinner{
+    0%{
+        transform: rotate(0turn);
+    }
+    50%{
+        transform: rotate(5turns);
+    }
+    100%{
+        transform: rotate($turns);
+    }
+}
+
+@keyframes fill_heart{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes thin_heart{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}

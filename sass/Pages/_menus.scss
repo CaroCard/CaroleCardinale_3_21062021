@@ -70,34 +70,10 @@
             }
             &:hover, &:active{
                 .fas{
-                    animation: fill_heart 0.4s 0.1s both ease-out;
+                    animation: fill_heart $heart-time $heart-delay both ease-out;
                 }
                 .far{
-                    animation: thin_heart 0.4s 0.1s forwards;
-                }
-            }
-            @keyframes fill_heart{
-                0%{
-                    opacity: 0;
-                    transform: scale(0);
-                }
-                80%{
-                    opacity: 1;
-                }
-                100%{
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-            @keyframes thin_heart{
-                0%{
-                    opacity: 1;
-                }
-                50%{
-                    opacity: 0.5;
-                }
-                100%{
-                    opacity: 0;
+                    animation: thin_heart $heart-time $heart-delay forwards;
                 }
             }
         }

@@ -16,7 +16,11 @@ $welcomePageWidths: (base: 18rem, tablet: 40rem, laptop: 65rem);
 $menuPageWidths: (base: 19rem, tablet: 45rem, laptop: 65rem);
 
 //ANIMATIONS
-
 //spinner
 $spin-time: 1.5s;
+$spin-delay: 0.05s;
 $turns: 5turn;
+
+//hearts
+$heart-time: 0.3s;
+$heart-delay: 0.05s;

@@ -1,3 +1,38 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(5turns);
+  }
+  100% {
+    transform: rotate(5turn);
+  }
+}
+@keyframes fill_heart {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes thin_heart {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .dishChecked, #sectionMenu, footer, #restaurants, #containerFonctionnement h2, #containerFonctionnement i, #fonctionnement, #mapExplore #explore, #mapExplore #map div, #mapExplore #map {
   display: flex;
   align-items: center;
@@ -76,17 +111,6 @@ body {
   animation: spinner 1.5s 0.05s cubic-bezier(0.42, 0.19, 0.52, 0.46);
 }
 
-@keyframes spinner {
-  0% {
-    transform: rotate(0turn);
-  }
-  50% {
-    transform: rotate(5turns);
-  }
-  100% {
-    transform: rotate(5turn);
-  }
-}
 header {
   padding: 0.7rem;
   text-align: center;
@@ -250,34 +274,10 @@ header img {
   opacity: 0;
 }
 #restaurants figure .figure__hearts:hover .fas, #restaurants figure .figure__hearts:active .fas {
-  animation: fill_heart 0.4s 0.1s both ease-out;
+  animation: fill_heart 0.3s 0.05s both ease-out;
 }
 #restaurants figure .figure__hearts:hover .far, #restaurants figure .figure__hearts:active .far {
-  animation: thin_heart 0.4s 0.1s forwards;
-}
-@keyframes fill_heart {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes thin_heart {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
+  animation: thin_heart 0.3s 0.05s forwards;
 }
 #restaurants figure h2, #restaurants figure p {
   margin: 0.8rem 0;
@@ -454,34 +454,10 @@ footer .fa-hands-helping {
   opacity: 0;
 }
 #sectionMenu #headSectionMenu .figure__hearts:hover .fas, #sectionMenu #headSectionMenu .figure__hearts:active .fas {
-  animation: fill_heart 0.4s 0.1s both ease-out;
+  animation: fill_heart 0.3s 0.05s both ease-out;
 }
 #sectionMenu #headSectionMenu .figure__hearts:hover .far, #sectionMenu #headSectionMenu .figure__hearts:active .far {
-  animation: thin_heart 0.4s 0.1s forwards;
-}
-@keyframes fill_heart {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes thin_heart {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
+  animation: thin_heart 0.3s 0.05s forwards;
 }
 @media screen and (min-width: 70em) {
   #sectionMenu #headSectionMenu {
