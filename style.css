@@ -513,22 +513,29 @@ footer .fa-hands-helping {
   padding: 0.5rem;
   line-height: 1.5em;
   width: 19rem;
-  display: grid;
-  grid-template-columns: 90% 10%;
-  grid-template-rows: repeat(2, 1.5em);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .menu__categories__dish * {
   margin: 0;
 }
-.menu__categories__dish p {
-  grid-row: 2/3;
+.menu__categories__dish h3 {
+  width: 19rem;
 }
-.menu__categories__dish .text--ellipsis {
+.menu__categories__dish:hover .text--ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: transform 0.4s 0.1s;
-  border: 1px solid black;
+  animation: ellipsis 0.4s 0.2s cubic-bezier(0.72, 0.01, 0.23, 0.98) forwards;
+}
+@keyframes ellipsis {
+  0% {
+    width: auto;
+  }
+  100% {
+    width: 200px;
+  }
 }
 .menu__categories__dish .dish__price {
   transition: all 0.4s 0.1s;
