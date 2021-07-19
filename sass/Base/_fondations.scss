@@ -16,12 +16,8 @@ body{
 #loading{
     background-color: darken(rgba(#fff, 0.5), 80);
     //POSITION
-    position: fixed;
+    @include position($type: fixed, $top: 0, $bottom:0, $left:0, $right:0);
     z-index: 2;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     //DISPLAY margin:auto not working for some reason aha...aha...aha...
     display: flex;
     justify-content: center;
@@ -139,9 +135,8 @@ header{
         color: #fff;
         @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
         padding: 0.1em 0.45em;
-        position: absolute;
-        left: -10px;
-        top: 4px;
+        @include position($top:4px, $left:-10px);
+
     }
     i{
         font-size: map-get($icon-size, L);

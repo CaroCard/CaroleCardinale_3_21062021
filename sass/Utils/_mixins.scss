@@ -40,7 +40,7 @@
     object-fit: cover;
 }
 //TO INSTALL IN PAGES AND ELSE, DO NOT FORGET "BEMS"
-@mixin position($type: absolute, $top:0, $bottom:0, $left:0, $right:0){
+@mixin position($type: absolute, $top: null, $bottom: null, $left: null, $right: null){
     position: $type;
     top: $top;
     bottom: $bottom;

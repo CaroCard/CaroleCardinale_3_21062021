@@ -4,7 +4,5 @@
     padding: 0.3rem 0.5rem;
     @include radius($N-W: .15em, $N-E: .15em, $S-E: .15em, $S-W: .15em);
     font-size: map-get($font-size, XS);
-    position: absolute;
-    right: 14px;
-    top: 14px;
+    @include position($top: 14px, $right: 14px);
 }

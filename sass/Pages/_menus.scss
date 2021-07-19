@@ -39,8 +39,7 @@
     @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
     @extend %flex-align;
     flex-direction: column;
-    position: relative;
-    top: -50px;
+    @include position($type: relative, $top: -50px);
     @include back_darken($degree: 3);
     padding-bottom: 2em;
     //TITLE MENU
@@ -63,11 +62,7 @@
             font-size: map-get($icon-size, XL);
             position: relative;
             .fas{
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 3px;
+                @include position($top: 3px, $bottom: 0, $left: 0, $right: 0);
                 color: transparent;
                 background: linear-gradient(to bottom right, $secondary, $primary);
                 background-clip: text;
