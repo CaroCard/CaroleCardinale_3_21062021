@@ -106,6 +106,8 @@
 //CATEGORIES && ALL DISHES
 .menu__categories{
     margin-bottom: 2em;
+    animation: dish_appearance 0.4s 0.2s backwards;
+
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid $tertiary;
@@ -138,7 +140,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
-    animation: dish_appearance 0.5s 0.2s both;
+    animation: dish_appearance 0.4s backwards;
+    @for $i from 1 through 3{
+        &--#{$i}{
+            animation-delay: 0.2s * $i;
+        }
+    }
     *{
         margin: 0;
     }

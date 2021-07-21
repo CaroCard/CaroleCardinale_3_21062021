@@ -25,15 +25,7 @@ body{
     visibility: hidden;
     animation: loading $spin-time;
 }
-@keyframes loading{
-    from{ 
-        visibility: visible;
-    }
-    to{
-        visibility: visible;
-    }
 
-}
 .spinner{
     //LOOKS
     font-size: 8em;

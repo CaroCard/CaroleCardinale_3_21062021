@@ -10,6 +10,15 @@
     }
 }
 
+@keyframes loading{
+    from{ 
+        visibility: visible;
+    }
+    to{
+        visibility: visible;
+    }
+}
+
 @keyframes fill_heart{
     0%{
         opacity: 0;
