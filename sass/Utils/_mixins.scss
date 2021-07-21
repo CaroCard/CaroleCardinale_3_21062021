@@ -39,7 +39,7 @@
     height: $height;
     object-fit: cover;
 }
-//TO INSTALL IN PAGES AND ELSE, DO NOT FORGET "BEMS"
+
 @mixin position($type: absolute, $top: null, $bottom: null, $left: null, $right: null){
     position: $type;
     top: $top;
@@ -49,3 +49,20 @@
 }
 
 //MIXINS FLEXBOX PLZ, placeholders to check
+@mixin flex-center($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-wrap($wrap: wrap, $justify: space-between){
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}
+
+@mixin flex-dir-align($align: center){
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+}

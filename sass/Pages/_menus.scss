@@ -1,10 +1,8 @@
 #headerMenu{
-    display: flex;
-    justify-content: center;
+    @include flex-center($align: null);
     div{
         width: map-get($menuPageWidths, base);
-        display: flex;
-        justify-content: center;
+        @include flex-center($align: null);
         @include mediaTablet{
             width: map-get($menuPageWidths, tablet);
         }
@@ -37,8 +35,7 @@
 //ENTIRE MENU
 #sectionMenu{
     @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
-    @extend %flex-align;
-    flex-direction: column;
+    @include flex-dir-align;
     @include position($type: relative, $top: -50px);
     @include back_darken($degree: 3);
     padding-bottom: 2em;
@@ -90,9 +87,7 @@
     //categories = all divs, title included
     #containerMenu{
         @include mediaTablet{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            @include flex-wrap($justify: space-around);
         }
         @include mediaLaptop{
             width: map-get($menuPageWidths, laptop);
@@ -120,9 +115,7 @@
     &__container{
         @include mediaLaptop{
             width: map-get($menuPageWidths, laptop);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            @include flex-wrap;
         }
     }
 }
@@ -136,9 +129,7 @@
     padding: 0.5rem;
     line-height: 1.5em;
     width: map-get($menuPageWidths, base);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include flex-wrap;
     overflow: hidden;
     animation: dish_appearance 0.4s backwards;
     @for $i from 1 through 3{
@@ -184,8 +175,7 @@
     .dishChecked{
         @include position($type: absolute, $top: 0, $right: -4em);
         background-color: $tertiary;
-        @extend %flex-align;
-        justify-content: center;
+        @include flex-center;
         width: 4em;
         height: 4em;
         @include radius($N-W: 0, $N-E: 1em, $S-E: 1em, $S-W: 0);
@@ -215,6 +205,5 @@
     margin-top: -100px;
 
     padding: 3rem 0 4rem 0;
-    display: flex;
-    justify-content: center;
+    @include flex-center($align: null);
 }

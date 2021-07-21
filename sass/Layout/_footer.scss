@@ -1,7 +1,6 @@
 //FOOTER//
 footer{
-    @extend %flex-align;
-    flex-direction: column;
+    @include flex-dir-align;
     @include back_darken($degree: 80);
     color: #fff;
     padding: 1.25rem 0;

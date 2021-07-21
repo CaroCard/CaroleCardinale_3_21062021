@@ -19,9 +19,7 @@ body{
     @include position($type: fixed, $top: 0, $bottom:0, $left:0, $right:0);
     z-index: 2;
     //DISPLAY margin:auto not working for some reason aha...aha...aha...
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     visibility: hidden;
     animation: loading $spin-time;
 }
@@ -46,11 +44,10 @@ header{
     #map{
         @include back_darken($degree: 8);
         @include color_darken($degree: 80);
-        @extend %flex-align;
-        justify-content: center;
+        @include flex-center;
         box-shadow: inset 0 3px 3px 0 rgba(#000, 0.1);
         div{
-            @extend %flex-align; //for the icon to be aligned vertically//
+            @include flex-center($justify: null); //for the icon to be aligned vertically//
             width: $logo-width; //to center content while being aligned with logo//
         }
         i{
@@ -60,8 +57,7 @@ header{
 
     #explore{
         text-align: center;
-        @extend %flex-column;
-        @extend %flex-align;
+        @include flex-dir-align;
         h1{
             width: map-get($welcomePageWidths, base);
             margin-bottom: 0;
@@ -80,8 +76,7 @@ header{
 
                         //FONCTIONNEMENT//
 #fonctionnement{
-    @extend %flex-align;
-    flex-direction: column;
+    @include flex-dir-align;
     h1{
         width: map-get($welcomePageWidths, base);
         @include mediaLaptop{
@@ -97,9 +92,7 @@ header{
     width: map-get($welcomePageWidths, base);
     @include mediaLaptop{
         width: map-get($welcomePageWidths, laptop);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @include flex-wrap;
     }
     div{
         width: map-get($welcomePageWidths, base);
@@ -121,11 +114,10 @@ header{
     i{
         font-size: map-get($icon-size, L);
         @include color_darken($degree: 50);
-        @extend %flex-align;
-        justify-content: center;
+        @include flex-center;
     }
     h2{
-        @extend %flex-align;
+        @include flex-center($justify: null);
     }
 }
 
@@ -141,8 +133,7 @@ header{
                         //RESTAURANTS//
  
 #restaurants{ 
-    @extend %flex-align;
-    flex-direction: column;
+    @include flex-dir-align;
     @include mediaLaptop{
         background-color: #fff;
     }
@@ -157,10 +148,8 @@ header{
     }
     #containerRestaurants{
         @include mediaTablet{
-            display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            @include flex-wrap;
             width: map-get($welcomePageWidths, tablet);
         }
         @include mediaLaptop{
@@ -192,8 +181,8 @@ header{
         .figure__hearts{
             grid-column: 2;
             grid-row: 1/3;
-            display: flex;
-            align-items: center;
+            z-index: 1;
+            @include flex-center($justify: null);
             .fas{
                 position: absolute;
                 color: transparent;
