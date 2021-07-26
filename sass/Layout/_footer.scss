@@ -6,12 +6,12 @@ footer{
     padding: 1.25rem 0;
     //pour maintenir le contenu au centre sans étalement//
     h3, ul{
-        width: map-get($welcomePageWidths, base);
+        width: map-get($pageWidths, base);
         @include mediaTablet{
-            width: map-get($welcomePageWidths, tablet);
+            width: map-get($pageWidths, tablet);
         }
         @include mediaLaptop{
-            width: map-get($welcomePageWidths, laptop);
+            width: map-get($pageWidths, laptop);
         }
     }
     a{

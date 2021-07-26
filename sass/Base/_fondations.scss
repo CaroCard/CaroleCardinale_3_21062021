@@ -59,15 +59,15 @@ header{
         text-align: center;
         @include flex-dir-align;
         h1{
-            width: map-get($welcomePageWidths, base);
+            width: map-get($pageWidths, base);
             margin-bottom: 0;
         }
         p{
-            width: map-get($welcomePageWidths, base +1);      //need larger width to match original//
+            width: map-get($pageWidths, base +1);      //need larger width to match original//
         }
         h1, p{
             @include mediaTablet{
-                width: map-get($welcomePageWidths, tablet);
+                width: map-get($pageWidths, tablet);
             }
         }
     }
@@ -78,9 +78,9 @@ header{
 #fonctionnement{
     @include flex-dir-align;
     h1{
-        width: map-get($welcomePageWidths, base);
+        width: map-get($pageWidths, base);
         @include mediaLaptop{
-            width: map-get($welcomePageWidths, laptop);
+            width: map-get($pageWidths, laptop);
         }
     }
 }
@@ -89,13 +89,13 @@ header{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     row-gap: 1.5em;
-    width: map-get($welcomePageWidths, base);
+    width: map-get($pageWidths, base);
     @include mediaLaptop{
-        width: map-get($welcomePageWidths, laptop);
+        width: map-get($pageWidths, laptop);
         @include flex-wrap;
     }
     div{
-        width: map-get($welcomePageWidths, base);
+        width: map-get($pageWidths, base);
         display: grid;
         grid-template-columns: 25% 80%;
         @include box-shadow;
@@ -138,28 +138,28 @@ header{
         background-color: #fff;
     }
     h1{
-        width: map-get($welcomePageWidths, base);
+        width: map-get($pageWidths, base);
         @include mediaTablet{
-            width: map-get($welcomePageWidths, tablet);
+            width: map-get($pageWidths, tablet);
         }
         @include mediaLaptop{
-            width: map-get($welcomePageWidths, laptop);
+            width: map-get($pageWidths, laptop);
         }
     }
     #containerRestaurants{
         @include mediaTablet{
             flex-direction: row;
             @include flex-wrap;
-            width: map-get($welcomePageWidths, tablet);
+            width: map-get($pageWidths, tablet);
         }
         @include mediaLaptop{
-            width: map-get($welcomePageWidths, laptop);
+            width: map-get($pageWidths, laptop);
 
         }
     }
     figure{
         margin: 0 0 1.2rem 0; //corrige default margin-left//
-        width: map-get($welcomePageWidths, base);
+        width: map-get($pageWidths, base);
         @include radius;
         overflow: hidden;   //removes img corners//
         @include box-shadow;

@@ -293,10 +293,10 @@ header img {
   opacity: 0;
 }
 #restaurants figure .figure__hearts:hover .fas, #restaurants figure .figure__hearts:active .fas {
-  animation: fill_heart 0.3s 0.05s both ease-out;
+  animation: fill_heart 0.2s 0.05s both ease-out;
 }
 #restaurants figure .figure__hearts:hover .far, #restaurants figure .figure__hearts:active .far {
-  animation: thin_heart 0.3s 0.05s forwards;
+  animation: thin_heart 0.2s 0.05s forwards;
 }
 #restaurants figure h2, #restaurants figure p {
   margin: 0.8rem 0;
@@ -395,13 +395,13 @@ footer .fa-hands-helping {
   justify-content: center;
 }
 #headerMenu div {
-  width: 19rem;
+  width: 18rem;
   display: flex;
   justify-content: center;
 }
 @media screen and (min-width: 50em) {
   #headerMenu div {
-    width: 45rem;
+    width: 48rem;
   }
 }
 @media screen and (min-width: 70em) {
@@ -446,13 +446,13 @@ footer .fa-hands-helping {
 }
 #sectionMenu #headSectionMenu {
   display: grid;
-  grid-template-columns: 70% 9%;
-  width: 19rem;
+  grid-template-columns: 85% 9%;
+  width: 18rem;
 }
 @media screen and (min-width: 50em) {
   #sectionMenu #headSectionMenu {
     font-size: 1.5em;
-    width: 45rem;
+    width: 48rem;
     grid-template-columns: 70% 5%;
   }
 }
@@ -485,10 +485,10 @@ footer .fa-hands-helping {
   opacity: 0;
 }
 #sectionMenu #headSectionMenu .figure__hearts:hover .fas, #sectionMenu #headSectionMenu .figure__hearts:active .fas {
-  animation: fill_heart 0.3s 0.05s both ease-out;
+  animation: fill_heart 0.2s 0.05s both ease-out;
 }
 #sectionMenu #headSectionMenu .figure__hearts:hover .far, #sectionMenu #headSectionMenu .figure__hearts:active .far {
-  animation: thin_heart 0.3s 0.05s forwards;
+  animation: thin_heart 0.2s 0.05s forwards;
 }
 @media screen and (min-width: 70em) {
   #sectionMenu #headSectionMenu {
@@ -497,6 +497,7 @@ footer .fa-hands-helping {
 }
 @media screen and (min-width: 50em) {
   #sectionMenu #containerMenu {
+    width: 48rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -541,7 +542,7 @@ footer .fa-hands-helping {
   margin-bottom: 0.7em;
   padding: 0.5rem;
   line-height: 1.5em;
-  width: 19rem;
+  width: 18rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -561,34 +562,31 @@ footer .fa-hands-helping {
   margin: 0;
 }
 .menu__categories__dish h3 {
-  width: 19rem;
-}
-.menu__categories__dish:hover .text--ellipsis {
+  width: 18rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.menu__categories__dish .text--ellipsis {
+  width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
   animation: ellipsis 0.2s 0.2s linear forwards;
 }
 @keyframes ellipsis {
   0% {
-    width: auto;
-  }
-  20% {
-    width: 230px;
-  }
-  40% {
-    width: 220px;
+    width: 85%;
   }
   100% {
-    width: 200px;
+    width: 65%;
   }
 }
 .menu__categories__dish .dish__price {
   transition: all 0.4s 0.1s;
   margin-right: 1rem;
-}
-.menu__categories__dish:hover .dish__price {
-  transform: translateX(-4em);
 }
 .menu__categories__dish .dishChecked {
   position: absolute;
@@ -611,10 +609,10 @@ footer .fa-hands-helping {
   padding: 0.2rem;
   font-size: 1em;
 }
-.menu__categories__dish:hover .dishChecked {
+.menu__categories__dish:hover .dish__price, .menu__categories__dish:active .dish__price, .menu__categories__dish:hover .dishChecked, .menu__categories__dish:active .dishChecked {
   transform: translateX(-4em);
 }
-.menu__categories__dish:hover .dishChecked i {
+.menu__categories__dish:hover .dish__price i, .menu__categories__dish:active .dish__price i, .menu__categories__dish:hover .dishChecked i, .menu__categories__dish:active .dishChecked i {
   transform: rotate(1turn);
   transition: all 0.4s 0.1s;
 }
