@@ -184,9 +184,7 @@ header{
             @include flex-center($justify: null);
             .fas{
                 position: absolute;
-                color: transparent;
-                background: linear-gradient(to bottom right, $secondary, $primary);
-                background-clip: text;
+                @include text-gradient;
                 opacity: 0;
             }
             &:hover, &:active{

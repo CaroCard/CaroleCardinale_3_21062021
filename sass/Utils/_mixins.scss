@@ -72,3 +72,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+@mixin text-gradient{
+    color: transparent;
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+}

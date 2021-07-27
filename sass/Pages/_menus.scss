@@ -40,7 +40,7 @@
     @include back_darken($degree: 3);
     padding-bottom: 2em;
     //TITLE MENU
-    #headSectionMenu{
+    #restaurantName{
         display: grid;
         grid-template-columns: 85% 9%;
         width: map-get($pageWidths, base);
@@ -51,7 +51,6 @@
         }
         @include mediaLaptop{
             width: map-get($pageWidths, laptop);
-            grid-template-columns: 40% 5%;
         }
         h1{
             font-family: 'shrikhand';
@@ -66,9 +65,7 @@
             position: relative;
             .fas{
                 @include position($top: 3px, $bottom: 0, $left: 0, $right: 0);
-                color: transparent;
-                background: linear-gradient(to bottom right, $secondary, $primary);
-                background-clip: text;
+                @include text-gradient;
                 opacity: 0;
             }
             &:hover, &:active{

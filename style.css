@@ -2,9 +2,6 @@
   0% {
     transform: rotate(0turn);
   }
-  50% {
-    transform: rotate(5turns);
-  }
   100% {
     transform: rotate(5turn);
   }
@@ -290,6 +287,7 @@ header img {
   color: transparent;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   opacity: 0;
 }
 #restaurants figure .figure__hearts:hover .fas, #restaurants figure .figure__hearts:active .fas {
@@ -444,36 +442,35 @@ footer .fa-hands-helping {
   background-color: #f7f7f7;
   padding-bottom: 2em;
 }
-#sectionMenu #headSectionMenu {
+#sectionMenu #restaurantName {
   display: grid;
   grid-template-columns: 85% 9%;
   width: 18rem;
 }
 @media screen and (min-width: 50em) {
-  #sectionMenu #headSectionMenu {
+  #sectionMenu #restaurantName {
     font-size: 1.5em;
     width: 48rem;
     grid-template-columns: 70% 5%;
   }
 }
 @media screen and (min-width: 70em) {
-  #sectionMenu #headSectionMenu {
+  #sectionMenu #restaurantName {
     width: 65rem;
-    grid-template-columns: 40% 5%;
   }
 }
-#sectionMenu #headSectionMenu h1 {
+#sectionMenu #restaurantName h1 {
   font-family: "shrikhand";
   font-size: 1.5em;
   font-weight: normal;
   text-align: center;
 }
-#sectionMenu #headSectionMenu .figure__hearts {
+#sectionMenu #restaurantName .figure__hearts {
   align-self: center;
   font-size: 1.5em;
   position: relative;
 }
-#sectionMenu #headSectionMenu .figure__hearts .fas {
+#sectionMenu #restaurantName .figure__hearts .fas {
   position: absolute;
   top: 3px;
   bottom: 0;
@@ -482,16 +479,17 @@ footer .fa-hands-helping {
   color: transparent;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   opacity: 0;
 }
-#sectionMenu #headSectionMenu .figure__hearts:hover .fas, #sectionMenu #headSectionMenu .figure__hearts:active .fas {
+#sectionMenu #restaurantName .figure__hearts:hover .fas, #sectionMenu #restaurantName .figure__hearts:active .fas {
   animation: fill_heart 0.2s 0.05s both ease-out;
 }
-#sectionMenu #headSectionMenu .figure__hearts:hover .far, #sectionMenu #headSectionMenu .figure__hearts:active .far {
+#sectionMenu #restaurantName .figure__hearts:hover .far, #sectionMenu #restaurantName .figure__hearts:active .far {
   animation: thin_heart 0.2s 0.05s forwards;
 }
 @media screen and (min-width: 70em) {
-  #sectionMenu #headSectionMenu {
+  #sectionMenu #restaurantName {
     font-size: 2em;
   }
 }
