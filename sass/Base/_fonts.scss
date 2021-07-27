@@ -3,25 +3,24 @@ body{
     font-family: 'roboto', Georgia, sans-serif;
 }
 
+
 h1{
     font-size: map-get($font-size, L);
+}
+
+footer h3{
+    font-size: map-get($font-size, M);
 }
 
 h2, h3, p, button, li{
     font-size: map-get($font-size, S);
 }
 
-//Classe div A INSTALLER//
-#sectionMenu div div p, #map p{
+.menu__categories__dish p, #map p{
     font-size: map-get($font-size, XS);
 }
 
 .font--thin{
     font-family: 'roboto';
     font-weight: lighter;
-}
-
-//TAILLES ICONES//
-figure i{
-    font-size: map-get($font-size, L);
 }

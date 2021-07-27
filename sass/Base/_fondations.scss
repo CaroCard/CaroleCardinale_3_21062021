@@ -112,7 +112,7 @@ header{
 
     }
     i{
-        font-size: map-get($icon-size, L);
+        font-size: map-get($font-size, M);
         @include color_darken($degree: 50);
         @include flex-center;
     }
@@ -181,6 +181,7 @@ header{
         .figure__hearts{
             grid-column: 2;
             grid-row: 1/3;
+            font-size: map-get($font-size, L);
             @include flex-center($justify: null);
             .fas{
                 position: absolute;

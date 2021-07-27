@@ -17,14 +17,11 @@ footer{
     a{
         @include links(#fff);
     }
-
     h3{
         font-family: 'shrikhand';
-        font-size: map-get($font-size, M);
         font-weight: normal;
         margin: 0;
     }
-
     ul{
         padding: 0;
         @include mediaLaptop{
@@ -32,19 +29,18 @@ footer{
             grid-template-columns: repeat(4, 1fr);
         }
     }
-
     li{
         list-style: none;
         line-height: 1.5rem;
     }
-
     i{
         object-fit: contain;
         margin-right: 0.5rem;
-        font-size: map-get($icon-size, S);
     }
-
+    .fa-utensils{
+        font-size: map-get($font-size, XS);
+    }
     .fa-hands-helping{
-        font-size: map-get($icon-size, XS);
+        font-size: map-get($font-size, XXS);
     }
 }

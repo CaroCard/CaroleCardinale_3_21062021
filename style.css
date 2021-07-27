@@ -2,6 +2,9 @@
   0% {
     transform: rotate(0turn);
   }
+  50% {
+    transform: rotate(5turns);
+  }
   100% {
     transform: rotate(5turn);
   }
@@ -48,6 +51,14 @@
     transform: translateY(0);
   }
 }
+@keyframes ellipsis {
+  0% {
+    width: 85%;
+  }
+  100% {
+    width: 65%;
+  }
+}
 body {
   font-family: "roboto", Georgia, sans-serif;
 }
@@ -56,21 +67,21 @@ h1 {
   font-size: 1.5em;
 }
 
+footer h3 {
+  font-size: 1.3em;
+}
+
 h2, h3, p, button, li {
   font-size: 1.1em;
 }
 
-#sectionMenu div div p, #map p {
+.menu__categories__dish p, #map p {
   font-size: 0.9em;
 }
 
 .font--thin {
   font-family: "roboto";
   font-weight: lighter;
-}
-
-figure i {
-  font-size: 1.5em;
 }
 
 body {
@@ -196,7 +207,7 @@ header img {
   left: -10px;
 }
 #containerFonctionnement i {
-  font-size: 1.25em;
+  font-size: 1.3em;
   color: gray;
   display: flex;
   justify-content: center;
@@ -279,6 +290,7 @@ header img {
 #restaurants figure .figure__hearts {
   grid-column: 2;
   grid-row: 1/3;
+  font-size: 1.5em;
   display: flex;
   align-items: center;
 }
@@ -362,7 +374,6 @@ footer a {
 }
 footer h3 {
   font-family: "shrikhand";
-  font-size: 1.3em;
   font-weight: normal;
   margin: 0;
 }
@@ -382,6 +393,8 @@ footer li {
 footer i {
   object-fit: contain;
   margin-right: 0.5rem;
+}
+footer .fa-utensils {
   font-size: 0.9em;
 }
 footer .fa-hands-helping {
@@ -409,7 +422,7 @@ footer .fa-hands-helping {
 }
 #headerMenu div i {
   color: #333333;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 #headerMenu div a {
   align-self: center;
@@ -461,7 +474,6 @@ footer .fa-hands-helping {
 }
 #sectionMenu #restaurantName h1 {
   font-family: "shrikhand";
-  font-size: 1.5em;
   font-weight: normal;
   text-align: center;
 }
@@ -490,7 +502,7 @@ footer .fa-hands-helping {
 }
 @media screen and (min-width: 70em) {
   #sectionMenu #restaurantName {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 @media screen and (min-width: 50em) {
@@ -574,14 +586,6 @@ footer .fa-hands-helping {
 .menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
   animation: ellipsis 0.2s 0.2s linear forwards;
 }
-@keyframes ellipsis {
-  0% {
-    width: 85%;
-  }
-  100% {
-    width: 65%;
-  }
-}
 .menu__categories__dish .dish__price {
   transition: all 0.4s 0.1s;
   margin-right: 1rem;
@@ -605,7 +609,7 @@ footer .fa-hands-helping {
   border-radius: 1em 1em 1em 1em;
   background-color: #fff;
   padding: 0.2rem;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .menu__categories__dish:hover .dish__price, .menu__categories__dish:active .dish__price, .menu__categories__dish:hover .dishChecked, .menu__categories__dish:active .dishChecked {
   transform: translateX(-4em);

@@ -11,7 +11,7 @@
         }
         i{
             @include color_darken($degree: 80);
-            font-size: 1.2em;
+            font-size: map-get($font-size, M);
         }
         a{
             align-self: center;
@@ -54,14 +54,13 @@
         }
         h1{
             font-family: 'shrikhand';
-            font-size: map-get($font-size, L);
             font-weight: normal;
             text-align: center;
         }
 
         .figure__hearts{
             align-self: center;
-            font-size: map-get($icon-size, XL);
+            font-size: map-get($font-size, L);
             position: relative;
             .fas{
                 @include position($top: 3px, $bottom: 0, $left: 0, $right: 0);
@@ -78,7 +77,7 @@
             }
         }
         @include mediaLaptop{
-            font-size: map-get($icon-size, XXL);
+            font-size: map-get($font-size, XL);
         }
     }
     //categories = all divs, title included
@@ -149,14 +148,6 @@
     &:hover .text--ellipsis, &:hover h3, &:active .text--ellipsis, &:active h3{
         animation: ellipsis 0.2s 0.2s linear forwards;
     }
-    @keyframes ellipsis{
-        0%{
-            width: 85%;
-        }
-        100%{
-            width: 65%;
-        }
-    }
 
     .dish__price{
         transition: all 0.4s 0.1s;
@@ -177,7 +168,7 @@
             @include radius;
             background-color: #fff;
             padding: 0.2rem;
-            font-size: map-get($icon-size, M);
+            font-size: map-get($font-size, S);
         }
     }
     //check slide of the dish when hover or active

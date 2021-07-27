@@ -55,3 +55,12 @@
         transform: translateY(0);
     }
 }
+
+@keyframes ellipsis{
+    0%{
+        width: 85%;
+    }
+    100%{
+        width: 65%;
+    }
+}
