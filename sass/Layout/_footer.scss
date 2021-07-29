@@ -18,8 +18,7 @@ footer{
         @include links(#fff);
     }
     h3{
-        font-family: 'shrikhand';
-        font-weight: normal;
+        @include shrikhand;
         margin: 0;
     }
     ul{
@@ -35,6 +34,7 @@ footer{
     }
     i{
         object-fit: contain;
+
         margin-right: 0.5rem;
     }
     .fa-utensils{

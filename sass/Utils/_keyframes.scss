@@ -1,3 +1,4 @@
+//spinner
 @keyframes spinner{
     0%{
         transform: rotate(0turn);
@@ -9,7 +10,6 @@
         transform: rotate($turns);
     }
 }
-
 @keyframes loading{
     from{ 
         visibility: visible;
@@ -19,6 +19,7 @@
     }
 }
 
+//hearts filling and disappearing
 @keyframes fill_heart{
     0%{
         opacity: 0;
@@ -32,7 +33,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes thin_heart{
     0%{
         opacity: 1;
@@ -45,6 +45,7 @@
     }
 }
 
+//progressive apparition of dishes
 @keyframes dish_appearance{
     0%{
         opacity: 0;
@@ -56,6 +57,7 @@
     }
 }
 
+//ellipsis creation
 @keyframes ellipsis{
     0%{
         width: 85%;

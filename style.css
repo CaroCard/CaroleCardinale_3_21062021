@@ -398,7 +398,7 @@ footer .fa-utensils {
   font-size: 0.9em;
 }
 footer .fa-hands-helping {
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 
 #headerMenu {
@@ -576,18 +576,21 @@ footer .fa-hands-helping {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: all 0.2s 0.2s;
 }
 .menu__categories__dish .text--ellipsis {
   width: 85%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: all 0.2s 0.2s;
 }
 .menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
-  animation: ellipsis 0.2s 0.2s linear forwards;
+  transform: width;
+  width: 65%;
 }
 .menu__categories__dish .dish__price {
-  transition: all 0.4s 0.1s;
+  transition: all 0.4s 0.1s ease-in-out;
   margin-right: 1rem;
 }
 .menu__categories__dish .dishChecked {
@@ -601,8 +604,7 @@ footer .fa-hands-helping {
   width: 4em;
   height: 4em;
   border-radius: 0 1em 1em 0;
-  transition-timing-function: ease-in-out;
-  transition: all 0.4s 0.1s;
+  transition: all 0.4s 0.1s ease-in-out;
 }
 .menu__categories__dish .dishChecked i {
   color: #99E2D0;

@@ -53,8 +53,7 @@
             width: map-get($pageWidths, laptop);
         }
         h1{
-            font-family: 'shrikhand';
-            font-weight: normal;
+            @include shrikhand;
             text-align: center;
         }
 
@@ -140,17 +139,20 @@
     h3{
         width: map-get($pageWidths, base);
         @include ellipsis;
+        transition: all 0.2s 0.2s;
     }
     .text--ellipsis{
         width: 85%;
         @include ellipsis;
+        transition: all 0.2s 0.2s;
     }
     &:hover .text--ellipsis, &:hover h3, &:active .text--ellipsis, &:active h3{
-        animation: ellipsis 0.2s 0.2s linear forwards;
+        transform: width;
+        width: 65%;
     }
 
     .dish__price{
-        transition: all 0.4s 0.1s;
+        transition: all 0.4s 0.1s ease-in-out;
         margin-right: 1rem;
     }
 
@@ -161,8 +163,7 @@
         width: 4em;
         height: 4em;
         @include radius($N-W: 0, $N-E: 1em, $S-E: 1em, $S-W: 0);
-        transition-timing-function: ease-in-out;
-        transition: all 0.4s 0.1s;
+        transition: all 0.4s 0.1s ease-in-out;
         i{
             color: $tertiary;
             @include radius;
@@ -171,7 +172,7 @@
             font-size: map-get($font-size, S);
         }
     }
-    //check slide of the dish when hover or active
+    //check & price slides of the dish when hover or active
     &:hover .dish__price, &:active .dish__price, &:hover .dishChecked, &:active .dishChecked{
         transform: translateX(-4em);
         i{
@@ -180,8 +181,6 @@
         }
     }
 }
-
-
 
 #buttonMenu{
     @include back_darken($degree: 3);
