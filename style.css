@@ -51,12 +51,12 @@
     transform: translateY(0);
   }
 }
-@keyframes ellipsis {
+@keyframes turn {
   0% {
-    width: 85%;
+    transform: rotate(0turn);
   }
   100% {
-    width: 65%;
+    transform: rotate(1turn);
   }
 }
 body {
@@ -93,10 +93,6 @@ body {
     max-width: 90rem;
     box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.2);
   }
-}
-
-.sections__background--color {
-  background-color: #f2f2f2;
 }
 
 #loading {
@@ -317,10 +313,6 @@ header img {
   object-fit: cover;
 }
 
-.div--padding {
-  padding: 1.5rem 0 3rem 0;
-}
-
 button {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   border: none;
@@ -345,6 +337,14 @@ button:hover {
   position: absolute;
   top: 14px;
   right: 14px;
+}
+
+.div--padding {
+  padding: 1.5rem 0 3rem 0;
+}
+
+.sections__background--color {
+  background-color: #f2f2f2;
 }
 
 footer {
@@ -576,14 +576,14 @@ footer .fa-hands-helping {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.2s 0.2s;
+  transition: all 0.3s 0.2s;
 }
 .menu__categories__dish .text--ellipsis {
   width: 85%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.2s 0.2s;
+  transition: all 0.3s 0.2s;
 }
 .menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
   transform: width;
@@ -617,8 +617,7 @@ footer .fa-hands-helping {
   transform: translateX(-4em);
 }
 .menu__categories__dish:hover .dish__price i, .menu__categories__dish:active .dish__price i, .menu__categories__dish:hover .dishChecked i, .menu__categories__dish:active .dishChecked i {
-  transform: rotate(1turn);
-  transition: all 0.4s 0.1s;
+  animation: turn 0.4s 0.1s ease-in-out;
 }
 
 #buttonMenu {

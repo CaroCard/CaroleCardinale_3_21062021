@@ -7,11 +7,6 @@ body{
     }
 }
 
-//COLORS//
-.sections__background--color{
-    @include back_darken($degree: 5);
-}
-
                         // ALL
 #loading{
     background-color: darken(rgba(#fff, 0.5), 80);
@@ -205,9 +200,3 @@ header{
         }
     }
 }    
-
-//@extend moi ça PLZ
-.div--padding{
-    padding: 1.5rem 0 3rem 0;
-}
-

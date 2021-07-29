@@ -1,9 +1,4 @@
-@mixin links($color: #000, $text-decoration: none){
-    color: $color;
-    text-decoration: $text-decoration;
-}
-
-//MEDIA QUERIES
+                        //MEDIA QUERIES
 @mixin mediaTablet{
     @media screen and(min-width: map-get($breakpoints, tablet)){
         @content;
@@ -15,6 +10,9 @@
     }
 }
 
+
+
+                        //COLORS
 //background darken
 @mixin back_darken($color: #fff, $degree: 3){
     background-color: darken($color, $degree);
@@ -22,9 +20,20 @@
 
 //color lighten
 @mixin color_darken($color: #fff, $degree: 3){
-    color: darken($color, $degree);
+    color: darken($color, $degree)
 }
 
+//puts linear-gradient from background to text
+@mixin text-gradient{
+    color: transparent;
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+
+                        //DECORATION
 @mixin box_shadow($opacity: 0.2){
     box-shadow: $shadow rgba(#000, $opacity);
 }
@@ -32,6 +41,23 @@
 @mixin radius($N-W: 1em, $N-E: 1em, $S-E: 1em, $S-W: 1em){
     border-radius: $N-W $N-E $S-E $S-W;
                 //north west, north east, south east, south west
+}
+
+//makes links neutral, unobvious
+@mixin links($color: #000, $text-decoration: none){
+    color: $color;
+    text-decoration: $text-decoration;
+}
+
+@mixin ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin shrikhand{
+    font-family: 'shrikhand';
+    font-weight: normal;
 }
 
 @mixin img_sizing($width: 100%, $height: 100%){
@@ -48,7 +74,9 @@
     right: $right;
 }
 
-//MIXINS FLEXBOX PLZ, placeholders to check
+
+
+                        //MIXINS FLEXBOX
 @mixin flex-center($justify: center, $align: center){
     display: flex;
     justify-content: $justify;
@@ -67,20 +95,8 @@
     align-items: $align;
 }
 
-@mixin ellipsis{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+@mixin slide{
+    transition: all $slide-time $slide-delay ease-in-out;
 }
 
-@mixin text-gradient{
-    color: transparent;
-    background: linear-gradient(to bottom right, $secondary, $primary);
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-@mixin shrikhand{
-    font-family: 'shrikhand';
-    font-weight: normal;
-}

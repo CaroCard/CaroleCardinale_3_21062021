@@ -6,3 +6,11 @@
     font-size: map-get($font-size, XS);
     @include position($top: 14px, $right: 14px);
 }
+
+.div--padding{
+    padding: 1.5rem 0 3rem 0;
+}
+
+.sections__background--color{
+    @include back_darken($degree: 5);
+}

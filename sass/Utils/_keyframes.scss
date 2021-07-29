@@ -19,7 +19,7 @@
     }
 }
 
-//hearts filling and disappearing
+//hearts filling and disappearing, exchange of icons for a filling effect when hover or active
 @keyframes fill_heart{
     0%{
         opacity: 0;
@@ -57,12 +57,12 @@
     }
 }
 
-//ellipsis creation
-@keyframes ellipsis{
+//check mark rotation
+@keyframes turn{
     0%{
-        width: 85%;
+        transform: rotate(0turn);
     }
     100%{
-        width: 65%;
+        transform: rotate(1turn);
     }
 }
