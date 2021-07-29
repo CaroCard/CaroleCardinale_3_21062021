@@ -56,7 +56,6 @@
             @include shrikhand;
             text-align: center;
         }
-
         .figure__hearts{
             align-self: center;
             font-size: map-get($font-size, L);
@@ -79,7 +78,7 @@
             font-size: map-get($font-size, XL);
         }
     }
-    //categories = all divs, title included
+    //categories
     #containerMenu{
         @include mediaTablet{
             width: map-get($pageWidths, menuTablet);
@@ -94,18 +93,17 @@
 
 
 
-//CATEGORIES && ALL DISHES
+//categories && all dishes
 .menu__categories{
     margin-bottom: 2em;
     animation: dish_appearance 0.4s 0.2s backwards;
-
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid $tertiary;
         width: 2em; //deals with the border, text in overflow//
         padding-bottom: 0.3rem;
         @include mediaLaptop{
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
         }
     }
     &__container{
@@ -114,77 +112,63 @@
             @include flex-wrap;
         }
     }
-}
-
-.menu__categories__dish{
-    position: relative;
-    background: #fff;
-    @include radius;
-    @include box-shadow(0.1);
-    margin-bottom: 0.7em;
-    padding: 0.5rem;
-    line-height: 1.5em;
-    width: map-get($pageWidths, base);
-    @include flex-wrap;
-    overflow: hidden;
-    animation: dish_appearance 0.4s backwards;
-    @for $i from 1 through 3{
-        &--#{$i}{
-            animation-delay: 0.2s * $i;
-        }
-    }
-    *{
-        margin: 0;
-    }
-    h3{
+    &__dish{
+        position: relative;
+        background: #fff;
+        @include radius;
+        @include box-shadow(0.1);
+        margin-bottom: 0.7em;
+        padding: 0.5rem;
+        line-height: 1.5em;
         width: map-get($pageWidths, base);
-        @include ellipsis;
-        transition: all 0.3s 0.2s;
-    }
-    .text--ellipsis{
-        width: 85%;
-        @include ellipsis;
-        transition: all 0.3s 0.2s;
-    }
-    &:hover .text--ellipsis, &:hover h3, &:active .text--ellipsis, &:active h3{
-        transform: width;
-        width: 65%;
-    }
-
-    .dish__price{
-        @include slide;
-        margin-right: 1rem;
-    }
-
-    .dishChecked{
-        @include position($type: absolute, $top: 0, $right: -4em);
-        background-color: $tertiary;
-        @include flex-center;
-        width: 4em;
-        height: 4em;
-        @include radius($N-W: 0, $N-E: 1em, $S-E: 1em, $S-W: 0);
-        @include slide;
-        i{
-            color: $tertiary;
-            @include radius;
-            background-color: #fff;
-            padding: 0.2rem;
-            font-size: map-get($font-size, S);
+        @include flex-wrap;
+        overflow: hidden;
+        animation: dish_appearance 0.4s backwards;
+        @for $i from 1 through 3{
+            &--#{$i}{
+                animation-delay: 0.2s * $i;
+            }
         }
-    }
-    //check & price slides of the dish when hover or active
-    &:hover .dish__price, &:active .dish__price, &:hover .dishChecked, &:active .dishChecked{
-        transform: translateX(-4em);
-        i{
-            animation: turn $slide-time $slide-delay ease-in-out;
+        *{
+            margin: 0;
+        }
+        h3{
+            @include anim-ellipsis;
+        }
+        .text--ellipsis{
+            @include anim-ellipsis(85%);
+        }
+        &:hover .text--ellipsis, &:hover h3, &:active .text--ellipsis, &:active h3{
+            transform: width;
+            width: 65%;
+        }
+        .dish__price{
+            @include slide;
+            margin-right: 1rem;
+        }
+        .dishChecked{
+            @include position($type: absolute, $top: 0, $right: -4em);
+            background-color: $tertiary;
+            @include flex-center;
+            width: 4em;
+            height: 4em;
+            @include radius($N-W: 0, $N-E: 1em, $S-E: 1em, $S-W: 0);
+            @include slide;
+            i{
+                color: $tertiary;
+                @include radius;
+                background-color: #fff;
+                padding: 0.2rem;
+                font-size: map-get($font-size, S);
+            }
+        }
+        //check & price slides of the dish when hover or active
+        &:hover .dish__price, &:active .dish__price, &:hover .dishChecked, &:active .dishChecked{
+            transform: translateX(-4em);
+            i{
+                animation: turn $slide-time $slide-delay ease-in-out;
+            }
         }
     }
 }
 
-#buttonMenu{
-    @include back_darken($degree: 3);
-    margin-top: -100px;
-
-    padding: 3rem 0 4rem 0;
-    @include flex-center($align: null);
-}

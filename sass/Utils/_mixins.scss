@@ -96,7 +96,15 @@
 }
 
 
+
+                        //ANIMATIONS
+//price && check
 @mixin slide{
     transition: all $slide-time $slide-delay ease-in-out;
 }
-
+//ellipsis when slides are on
+@mixin anim-ellipsis($width: 100%){
+    width: $width;
+    @include ellipsis;
+    transition: all $ellipsis-time $ellipsis-delay;
+}

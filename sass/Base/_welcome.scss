@@ -13,17 +13,16 @@ body{
     //POSITION
     @include position($type: fixed, $top: 0, $bottom:0, $left:0, $right:0);
     z-index: 2;
-    //DISPLAY margin:auto not working for some reason aha...aha...aha...
     @include flex-center;
+    //animation
     visibility: hidden;
     animation: loading $spin-time;
 }
 
 .spinner{
-    //LOOKS
     font-size: 8em;
     color: $tertiary;
-    //ANIMATION
+    //animation
     animation: spinner $spin-time $spin-delay cubic-bezier(.42,.19,.52,.46);
 }
 
@@ -35,6 +34,7 @@ header{
     }
 }
 
+                        //MAP EXPLORE
 #mapExplore{
     #map{
         @include back_darken($degree: 8);
@@ -114,12 +114,11 @@ header{
     h2{
         @include flex-center($justify: null);
     }
-}
-
-#fonctionnementDegustez{
-    background-color: lighten($primary, 35);
-    i{
-        color: $primary;
+    #fonctionnementDegustez{
+        background-color: lighten($primary, 35);
+        i{
+            color: $primary;
+        }
     }
 }
 
@@ -173,6 +172,12 @@ header{
             line-height: 0;             //pas moins possible, dommage//
             padding: 0.6rem;
         }
+        h2, p{
+            margin: 0.8rem 0;
+        }
+        img{
+            @include img_sizing($height: 150px);
+        }
         .figure__hearts{
             grid-column: 2;
             grid-row: 1/3;
@@ -191,12 +196,6 @@ header{
                     animation: thin_heart $heart-time $heart-delay forwards;
                 }
             }
-        }
-        h2, p{
-            margin: 0.8rem 0;
-        }
-        img{
-            @include img_sizing($height: 150px);
         }
     }
 }    

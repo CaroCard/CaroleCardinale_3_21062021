@@ -213,11 +213,10 @@ header img {
   display: flex;
   align-items: center;
 }
-
-#fonctionnementDegustez {
+#containerFonctionnement #fonctionnementDegustez {
   background-color: #f2eafb;
 }
-#fonctionnementDegustez i {
+#containerFonctionnement #fonctionnementDegustez i {
   color: #9356DC;
 }
 
@@ -283,6 +282,14 @@ header img {
   line-height: 0;
   padding: 0.6rem;
 }
+#restaurants figure h2, #restaurants figure p {
+  margin: 0.8rem 0;
+}
+#restaurants figure img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
 #restaurants figure .figure__hearts {
   grid-column: 2;
   grid-row: 1/3;
@@ -304,28 +311,28 @@ header img {
 #restaurants figure .figure__hearts:hover .far, #restaurants figure .figure__hearts:active .far {
   animation: thin_heart 0.2s 0.05s forwards;
 }
-#restaurants figure h2, #restaurants figure p {
-  margin: 0.8rem 0;
-}
-#restaurants figure img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
 
 button {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border: none;
-  border-radius: 2em 2em 2em 2em;
-  box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.2);
-  color: #fff;
   width: 14rem;
   height: 3rem;
   margin-top: 1rem;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border-radius: 2em 2em 2em 2em;
+  box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.2);
 }
 button:hover {
   box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.5);
   background: linear-gradient(to bottom right, #fface8, #ae80e5);
+}
+
+#buttonMenu {
+  background-color: #f7f7f7;
+  margin-top: -100px;
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .figure__nouveau--looksPosition {
@@ -390,15 +397,13 @@ footer li {
   list-style: none;
   line-height: 1.5rem;
 }
-footer i {
-  object-fit: contain;
-  margin-right: 0.5rem;
-}
 footer .fa-utensils {
   font-size: 0.9em;
+  margin-right: 0.5rem;
 }
 footer .fa-hands-helping {
   font-size: 0.8em;
+  margin-right: 0.2em;
 }
 
 #headerMenu {
@@ -532,7 +537,7 @@ footer .fa-hands-helping {
 }
 @media screen and (min-width: 70em) {
   .menu__categories h2 {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (min-width: 70em) {
@@ -543,7 +548,6 @@ footer .fa-hands-helping {
     justify-content: space-between;
   }
 }
-
 .menu__categories__dish {
   position: relative;
   background: #fff;
@@ -572,18 +576,18 @@ footer .fa-hands-helping {
   margin: 0;
 }
 .menu__categories__dish h3 {
-  width: 18rem;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.3s 0.2s;
+  transition: all 0.4s 0.2s;
 }
 .menu__categories__dish .text--ellipsis {
   width: 85%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: all 0.3s 0.2s;
+  transition: all 0.4s 0.2s;
 }
 .menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
   transform: width;
@@ -618,14 +622,6 @@ footer .fa-hands-helping {
 }
 .menu__categories__dish:hover .dish__price i, .menu__categories__dish:active .dish__price i, .menu__categories__dish:hover .dishChecked i, .menu__categories__dish:active .dishChecked i {
   animation: turn 0.4s 0.1s ease-in-out;
-}
-
-#buttonMenu {
-  background-color: #f7f7f7;
-  margin-top: -100px;
-  padding: 3rem 0 4rem 0;
-  display: flex;
-  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

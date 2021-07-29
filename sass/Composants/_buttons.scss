@@ -1,15 +1,22 @@
 button{
-    background: linear-gradient(to bottom right, $secondary, $primary);
-    border: none;
-    @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
-    @include box-shadow;
-    color: #fff;
     width: 14rem;
     height: 3rem;
     margin-top: 1rem;
+    border: none;
+    color: #fff;
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    @include radius($N-W: 2em, $N-E: 2em, $S-E: 2em, $S-W: 2em);
+    @include box-shadow;
     &:hover{
         @include box-shadow(0.5);
         background: linear-gradient(to bottom right, lighten($secondary, 10), lighten($primary, 10));
     }
 }
 
+#buttonMenu{
+    @include back_darken($degree: 3);
+    margin-top: -100px;
+
+    padding: 3rem 0 4rem 0;
+    @include flex-center($align: null);
+}

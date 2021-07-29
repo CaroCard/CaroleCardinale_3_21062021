@@ -4,8 +4,7 @@ footer{
     @include back_darken($degree: 80);
     color: #fff;
     padding: 1.25rem 0;
-    //pour maintenir le contenu au centre sans étalement//
-    h3, ul{
+    h3, ul{//pour maintenir le contenu au centre sans étalement//
         width: map-get($pageWidths, base);
         @include mediaTablet{
             width: map-get($pageWidths, tablet);
@@ -32,15 +31,12 @@ footer{
         list-style: none;
         line-height: 1.5rem;
     }
-    i{
-        object-fit: contain;
-
-        margin-right: 0.5rem;
-    }
     .fa-utensils{
         font-size: map-get($font-size, XS);
+        margin-right: 0.5rem;
     }
     .fa-hands-helping{
         font-size: map-get($font-size, XXS);
+        margin-right: 0.2em;
     }
 }
