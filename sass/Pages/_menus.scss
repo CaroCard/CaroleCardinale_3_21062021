@@ -96,7 +96,7 @@
 //categories && all dishes
 .menu__categories{
     margin-bottom: 2em;
-    animation: dish_appearance 0.4s 0.2s backwards;
+    animation: dish_appearance $appearance-time $appearance-delay backwards;
     h2{
         text-transform: uppercase;
         border-bottom: 3px solid $tertiary;
@@ -123,10 +123,10 @@
         width: map-get($pageWidths, base);
         @include flex-wrap;
         overflow: hidden;
-        animation: dish_appearance 0.4s backwards;
+        animation: dish_appearance $appearance-time backwards;
         @for $i from 1 through 3{
             &--#{$i}{
-                animation-delay: 0.2s * $i;
+                animation-delay: $appearance-delay * $i;
             }
         }
         *{
