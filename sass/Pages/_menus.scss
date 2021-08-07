@@ -124,7 +124,7 @@
         @include flex-wrap;
         overflow: hidden;
         animation: dish_appearance $appearance-time backwards;
-        @for $i from 1 through 3{
+        @for $i from 1 through 4{
             &--#{$i}{
                 animation-delay: $appearance-delay * $i;
             }
@@ -139,7 +139,6 @@
             @include anim-ellipsis(85%);
         }
         &:hover .text--ellipsis, &:hover h3, &:active .text--ellipsis, &:active h3{
-            transform: width;
             width: 65%;
         }
         .dish__price{

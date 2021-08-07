@@ -3,7 +3,7 @@
     transform: rotate(0turn);
   }
   50% {
-    transform: rotate(5turns);
+    transform: rotate(5turn);
   }
   100% {
     transform: rotate(5turn);
@@ -572,6 +572,9 @@ footer .fa-hands-helping {
 .menu__categories__dish--3 {
   animation-delay: 0.6s;
 }
+.menu__categories__dish--4 {
+  animation-delay: 0.8s;
+}
 .menu__categories__dish * {
   margin: 0;
 }
@@ -590,7 +593,6 @@ footer .fa-hands-helping {
   transition: all 0.4s 0.2s;
 }
 .menu__categories__dish:hover .text--ellipsis, .menu__categories__dish:hover h3, .menu__categories__dish:active .text--ellipsis, .menu__categories__dish:active h3 {
-  transform: width;
   width: 65%;
 }
 .menu__categories__dish .dish__price {
