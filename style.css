@@ -75,6 +75,10 @@ h2, h3, p, button, li {
   font-size: 1.1em;
 }
 
+.sections__titles {
+  font-size: 1.5em;
+}
+
 .menu__categories__dish p, #map p {
   font-size: 0.9em;
 }
@@ -161,11 +165,11 @@ header img {
   flex-direction: column;
   align-items: center;
 }
-#fonctionnement h1 {
+#fonctionnement h2 {
   width: 18rem;
 }
 @media screen and (min-width: 70em) {
-  #fonctionnement h1 {
+  #fonctionnement h2 {
     width: 65rem;
   }
 }
@@ -230,16 +234,16 @@ header img {
     background-color: #fff;
   }
 }
-#restaurants h1 {
+#restaurants h2 {
   width: 18rem;
 }
 @media screen and (min-width: 50em) {
-  #restaurants h1 {
+  #restaurants h2 {
     width: 40rem;
   }
 }
 @media screen and (min-width: 70em) {
-  #restaurants h1 {
+  #restaurants h2 {
     width: 65rem;
   }
 }

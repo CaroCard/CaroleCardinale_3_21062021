@@ -15,6 +15,10 @@ h2, h3, p, button, li{
     font-size: map-get($font-size, S);
 }
 
+.sections__titles{
+    font-size: map-get($font-size, L);
+}
+
 .menu__categories__dish p, #map p{
     font-size: map-get($font-size, XS);
 }

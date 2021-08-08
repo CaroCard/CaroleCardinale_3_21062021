@@ -72,7 +72,7 @@ header{
                         //FONCTIONNEMENT//
 #fonctionnement{
     @include flex-dir-align;
-    h1{
+    h2{
         width: map-get($pageWidths, base);
         @include mediaLaptop{
             width: map-get($pageWidths, laptop);
@@ -131,7 +131,7 @@ header{
     @include mediaLaptop{
         background-color: #fff;
     }
-    h1{
+    h2{
         width: map-get($pageWidths, base);
         @include mediaTablet{
             width: map-get($pageWidths, tablet);
